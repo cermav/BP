@@ -1,0 +1,320 @@
+.appointments {
+  main {
+    flex: 1;
+    .mainContainer {
+      max-width: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      .appointmentContainer {
+        width: 100%;
+        max-width: 60rem;
+        padding: 0 1rem;
+        margin: 0 auto 2rem auto;
+        position: relative;
+        @include sm {
+          padding: 0 2rem;
+          display: unset;
+        }
+        .topSection {
+          .petInfo {
+            a {
+              position: relative;
+            }
+          }
+          @include md {
+            margin: 0 3rem;
+            padding-right: 3rem;
+          }
+        }
+        .tableTop {
+          margin-bottom: 1rem;
+          display: flex;
+          clear: both;
+          justify-content: space-between;
+          @include md {
+            align-items: center;
+            margin-top: 2rem;
+          }
+          @media (min-width: 1060px) {
+            height: 70px;
+          }
+          .appointmentButtons {
+            order: -1;
+            margin-bottom: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 100%;
+            @include md {
+              margin-bottom: 0;
+            }
+            .holder {
+              display: flex;
+              margin: 5px 0;
+              justify-content: center;
+              @media (min-width: 400px) {
+                justify-content: flex-start;
+              }
+              @include md {
+                flex: 1;
+                margin: 0;
+              }
+            }
+            h1 {
+              order: 1;
+              font-size: 1.8rem;
+              margin-top: 2rem;
+              padding: 0 1px;
+              text-align: center;
+              width: 100%;
+              @include md {
+                width: unset;
+                flex: 1;
+                order: 0;
+                margin-top: 0;
+              }
+              @include lg {
+                white-space: nowrap;
+              }
+            }
+            a {
+              display: flex;
+              justify-content: flex-end;
+              margin: 5px 0;
+              flex: 1;
+              @media (min-width: 400px) {
+                flex: unset;
+                justify-content: flex-end;
+              }
+              @include sm {
+                flex: 1;
+                margin: 0;
+              }
+            }
+          }
+        }
+        .appointmentsList {
+          display: flex;
+          flex-direction: column;
+          .firstRow,
+          .row,
+          .rowClose {
+            width: 100%;
+            margin: 0.5rem;
+            display: flex;
+            align-items: flex-start;
+            border-radius: 36px;
+            @include sm {
+              margin: 0.5rem 0rem;
+            }
+            @include md {
+              border-radius: 42px;
+            }
+
+            .holder {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              margin-right: 2rem;
+              @include md {
+                flex: 1;
+              }
+              .small {
+                margin-right: 0;
+                display: flex;
+                flex-wrap: nowrap;
+              }
+              .doctor {
+                @include lg {
+                  display: none;
+                }
+              }
+              .name {
+                @include mdx {
+                  margin-bottom: 1rem;
+                }
+              }
+              .label {
+                margin-right: 0.5rem;
+              }
+              .text {
+                line-break: auto;
+                font-family: $font-bold;
+              }
+            }
+            .first {
+              @include smx {
+                flex: 10;
+              }
+              @include sm {
+                flex: 6;
+                .date,
+                .interval {
+                  display: none;
+                }
+              }
+              @include md {
+                flex: 3;
+              }
+              @include lg {
+                flex: 2;
+              }
+            }
+            .second {
+              @include smx {
+                display: none;
+              }
+              @include sm {
+                flex: 4;
+              }
+              @include md {
+                display: none;
+              }
+            }
+
+            .description {
+              flex: 3;
+              margin-right: 2rem;
+              @include lg {
+                flex: 2;
+              }
+            }
+            .date {
+              margin-right: 2rem;
+              @include mdx {
+                display: none;
+              }
+              flex: 1;
+            }
+            .interval {
+              margin-right: 2rem;
+              display: none;
+              @include md {
+                display: initial;
+                flex: 1;
+              }
+            }
+            .text {
+              line-break: auto;
+            }
+            .doctor {
+              display: flex;
+              flex-wrap: nowrap;
+
+              @include lgx {
+                display: none;
+              }
+              flex: 1;
+              margin-right: 2rem;
+              .label {
+                @include lg {
+                  display: none;
+                }
+              }
+            }
+            .placeHolder,
+            .icons {
+              flex: 1.5;
+              right: -1rem;
+              @include md {
+                right: -1.5rem;
+              }
+            }
+          }
+
+          .firstRow {
+            padding: 0 2rem;
+            justify-content: space-between;
+            color: #969696;
+            line-height: 1rem;
+          }
+          .row,
+          .rowClose {
+            background-color: white;
+            box-shadow: 1px 1px rgba(0, 0, 0, 0.16);
+            padding: 1rem 2rem;
+            border-radius: 36px;
+            @include md {
+              border-radius: 42px;
+            }
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            .name,
+            .date,
+            .interval,
+            .doctor {
+              margin-top: 0.45rem;
+            }
+            .name {
+              font-family: $font-bold;
+              font-size: 1.17em;
+            }
+            .date,
+            .interval {
+              @include sm {
+                white-space: nowrap;
+              }
+            }
+            .icons {
+              display: flex;
+              flex-direction: column;
+              justify-content: flex-end;
+              align-items: flex-end;
+              position: relative;
+              @include lg {
+                flex-direction: row;
+              }
+              .icons-group {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: flex-end;
+                .sign {
+                  &:first-child {
+                    @include mdx {
+                      margin-bottom: 0.6rem;
+                    }
+                  }
+                }
+                @include md {
+                  flex-direction: row;
+                  flex-wrap: nowrap;
+                }
+                @include lgx {
+                  margin-top: 0.6rem;
+                }
+              }
+              .sign {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 100%;
+                background-color: #ce6668;
+                cursor: pointer;
+                //margin-bottom: 0.6rem;
+                @include md {
+                  margin-right: 0.6rem;
+                }
+                img {
+                  box-sizing: content-box;
+                  padding: 0.6rem;
+                  width: 1.1rem;
+                  min-width: 1.1rem;
+                  min-height: 1.1rem;
+                  height: 1.1rem;
+                }
+              }
+            }
+          }
+          .rowClose {
+            background-color: hsl(359, 51%, 85%);
+          }
+        }
+      }
+    }
+  }
+}

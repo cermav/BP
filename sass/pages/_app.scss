@@ -1,0 +1,315 @@
+.app {
+  .flex {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .nextFce {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    .ask {
+      width: 100%;
+      @include sm {
+        width: auto;
+      }
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      border-radius: 15px;
+      padding: 30px;
+      background-color: #c46867;
+      color: white;
+      font-size: 20px;
+      font-weight: bolder;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      -webkit-box-shadow: 10px 10px 12px -4px rgba(0, 0, 0, 0.29);
+      -moz-box-shadow: 10px 10px 12px -4px rgba(0, 0, 0, 0.29);
+      box-shadow: 10px 10px 12px -4px rgba(0, 0, 0, 0.29);
+    }
+    .stars {
+      width: 100%;
+      @include sm {
+        width: auto;
+      }
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      border-radius: 15px;
+      padding: 30px;
+      background-color: #85b0b0;
+      color: white;
+      font-size: 20px;
+      font-weight: bolder;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      -webkit-box-shadow: 10px 10px 12px -4px rgba(0, 0, 0, 0.29);
+      -moz-box-shadow: 10px 10px 12px -4px rgba(0, 0, 0, 0.29);
+      box-shadow: 10px 10px 12px -4px rgba(0, 0, 0, 0.29);
+    }
+    .rss {
+      width: 100%;
+      @include sm {
+        width: auto;
+      }
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      border-radius: 15px;
+      padding: 30px;
+      background-color: #a4b8e6;
+      color: white;
+      font-size: 20px;
+      font-weight: bolder;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      -webkit-box-shadow: 10px 10px 12px -4px rgba(0, 0, 0, 0.29);
+      -moz-box-shadow: 10px 10px 12px -4px rgba(0, 0, 0, 0.29);
+      box-shadow: 10px 10px 12px -4px rgba(0, 0, 0, 0.29);
+    }
+    .pet {
+      width: 100%;
+      @include sm {
+        width: auto;
+      }
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      border-radius: 15px;
+      padding: 30px;
+      background-color: #c4def0;
+      color: black;
+      font-size: 20px;
+      font-weight: bolder;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      -webkit-box-shadow: 10px 10px 12px -4px rgba(0, 0, 0, 0.29);
+      -moz-box-shadow: 10px 10px 12px -4px rgba(0, 0, 0, 0.29);
+      box-shadow: 10px 10px 12px -4px rgba(0, 0, 0, 0.29);
+    }
+    .bels {
+      width: 100%;
+      @include sm {
+        width: auto;
+      }
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      border-radius: 15px;
+      padding: 30px;
+      background-color: #d4bde1;
+      color: black;
+      font-size: 20px;
+      font-weight: bolder;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      -webkit-box-shadow: 10px 10px 12px -4px rgba(0, 0, 0, 0.29);
+      -moz-box-shadow: 10px 10px 12px -4px rgba(0, 0, 0, 0.29);
+      box-shadow: 10px 10px 12px -4px rgba(0, 0, 0, 0.29);
+    }
+    .dalsi {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      border-radius: 15px;
+      padding: 30px;
+      color: white;
+      font-size: 20px;
+      font-weight: bolder;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+    .iconnext {
+      margin-right: 20px;
+    }
+  }
+  .page {
+    background-color: $color-carnation;
+  }
+  .hero {
+    background-color: $color-carnation;
+    .heroContent {
+      padding-bottom: 2rem;
+      p {
+        max-width: 100%;
+        font-size: 30px;
+        font-weight: bolder;
+        line-height: 120%;
+      }
+    }
+    .heroIllustration {
+      display: none;
+    }
+  }
+  .headerApp {
+    width: 100%;
+    @include sm {
+      display: flex;
+    }
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    .appStores {
+      z-index: 10;
+      margin: 0rem 0 2rem;
+      display: flex;
+      align-content: space-around;
+      @include sm {
+        z-index: 10;
+        display: block;
+      }
+      img {
+        margin: 0 0.5rem 0.5rem 0;
+        width: 8rem;
+        height: 2.647rem;
+        @include sm {
+          width: 9rem;
+          height: 2.978rem;
+        }
+      }
+    }
+  }
+  .subHeader {
+    @include sm {
+      width: 50%;
+    }
+    font-size: 25px;
+    color: white;
+    font-weight: bolder;
+    margin-bottom: 30px;
+    line-height: 140%;
+  }
+  .appFce {
+    margin-bottom: 20px;
+    @include sm {
+      display: flex;
+      .appFceLeft {
+        margin-left: 20px;
+      }
+    }
+  }
+
+  .appFceReversed {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column-reverse;
+    @include sm {
+      display: flex;
+      flex-direction: row;
+      .appFceRight {
+        margin-left: 20px;
+      }
+    }
+  }
+
+  .text {
+    color: white;
+    font-size: 15px;
+    font-weight: bolder;
+    padding-right: 20px;
+    @include md {
+      font-size: 20px;
+      padding-right: 40px;
+    }
+  }
+  .icon {
+    margin: 0px 20px 0px 20px;
+    z-index: 100;
+    width: 30px;
+    height: 30px;
+    @include md {
+      margin: 0px 30px 0px 30px;
+      width: 50px;
+      height: 50px;
+    }
+  }
+  // margin-bottom: 40px;
+  .appFceLeft {
+    @include sm {
+      width: 50%;
+    }
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+  }
+  .allText {
+    max-width: 478px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    padding: 0px 10px 0px 10px;
+    margin-top: 20px;
+    color: white;
+    @include md {
+      font-size: 20px;
+    }
+  }
+
+  .appFceRight {
+    @include sm {
+      width: 50%;
+      .sticky {
+        top: 7rem;
+        position: sticky;
+      }
+    }
+    .cardContent {
+      max-width: 478px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      background-color: #2c2c2c;
+      border-radius: 10px;
+      height: 100px;
+      @include sm {
+        &:before {
+          width: 2rem;
+          height: 2rem;
+          content: "";
+          display: block;
+          position: absolute;
+          margin-left: -0.9rem;
+          -webkit-transform: rotate(-45deg);
+          -moz-transform: rotate(-45deg);
+          -ms-transform: rotate(-45deg);
+          -o-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+          background-color: #2c2c2c;
+          border-radius: 0.2rem;
+          z-index: 2;
+        }
+      }
+    }
+    .cardContentLeft {
+      max-width: 478px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      background-color: #2c2c2c;
+      border-radius: 10px;
+      height: 100px;
+      @include sm {
+        &:after {
+          right: 0;
+          width: 40px;
+          height: 40px;
+          content: "";
+          display: block;
+          position: relative;
+          margin-right: -0.8rem;
+          -webkit-transform: rotate(-45deg);
+          -moz-transform: rotate(-45deg);
+          -ms-transform: rotate(-45deg);
+          -o-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+          background-color: #2c2c2c;
+          border-radius: 0.2rem;
+          z-index: 2;
+        }
+      }
+    }
+  }
+}

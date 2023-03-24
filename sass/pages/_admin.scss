@@ -1,0 +1,95 @@
+.admin {
+    /*     .fakeHero,
+    .header .userMenu ul,
+    #menu,
+    .footer,
+    .footer form input[type="email"],
+    .header.sticky {
+        background: $color-carnation;
+    }
+    .footer form input[type="submit"] {
+        color: $color-carnation;
+    } */
+}
+.adminWrapper {
+    margin: 4rem 0;
+    min-height: 20vw;
+    // min-height: calc(100vh - 450px);
+    clear: both;
+    .vetTable {
+        width: 100%;
+        td {
+            vertical-align: top;
+            padding: 3px 6px;
+        }
+        .imageWrapSmall .image {
+            // max-height: 40px;
+            min-width: 50px;
+            height: 30px;
+            display: block;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: 50%;
+        }
+        a {
+            color: $color-blue;
+        }
+    }
+    .dashboards {
+        display: flex;
+        align-content: center;
+        .item {
+            width: 50%;
+            td {
+                a {
+                    color: $color-blue;
+                }
+                // font-size: 0.8rem;
+                padding: 3px 12px 3px 0;
+            }
+            .button {
+                margin: 1rem 0;
+            }
+        }
+        h2 {
+            margin: 1rem 0 0.5rem;
+            font-size: 1rem;
+        }
+    }
+    h1 {
+        margin: 1rem 0 2rem;
+    }
+    p {
+        margin: 1rem 0 2rem;
+    }
+    .rankingWrapper {
+        /*         float: left;
+        width: 7.2rem;
+        overflow: hidden; */
+        .label {
+            width: 6rem;
+            display: inline-block;
+        }
+        .ranking {
+            width: 8rem;
+        }
+    }
+    .label {
+        color: $color-dark-grey;
+    }
+    .labelSmall {
+        color: $color-dark-grey;
+        font-size: 0.8rem;
+        line-height: 1rem;
+    }
+    h2.grey {
+        color: $color-grey;
+        font-family: WeissenhofGrotesk-Regular, sans-serif;
+    }
+    td .button {
+        margin: 0 0.3rem 0.3rem 0;
+    }
+    .red {
+        color: $color-carnation;
+    }
+}

@@ -1,0 +1,215 @@
+.consulting {
+  .page {
+    background-color: $color-snowhite;
+  }
+  .hero {
+    background-color: $color-soft-blue;
+    .heroContent {
+      padding-bottom: 2rem;
+      p {
+        max-width: 100%;
+      }
+    }
+    .heroIllustration {
+      display: none;
+    }
+  }
+  .avatar {
+    height: 50px;
+    margin-bottom: -1rem;
+    overflow: hidden;
+    cursor: pointer;
+    img {
+      object-fit: cover;
+      opacity: 0.4;
+      border: 2px solid transparent;
+      margin-top: 0.2rem;
+      border-radius: 50%;
+      margin-right: 0.6rem;
+      @include md {
+        display: block;
+        left: 0.2rem;
+        margin-bottom: -1rem;
+        position: relative;
+      }
+    }
+    &.active {
+      img {
+        object-fit: cover;
+        opacity: 1;
+        color: $color-blue-hover;
+        display: inline-block !important;
+      }
+    }
+  }
+  .faqs {
+    // max-width: 45rem;
+    padding: 1rem 0 2rem;
+    @include md {
+      padding: 2rem 0 3rem;
+    }
+    .consultItem {
+      transition: all 0.2s ease-in-out;
+      cursor: pointer;
+      background-color: $color-white;
+      padding: 1rem;
+      @include md {
+        padding: 2rem;
+      }
+      margin-bottom: 1rem;
+      /*       @include md {
+        margin-bottom: 2rem;
+      } */
+      border-radius: 50px;
+      .head {
+        @include md {
+          display: flex;
+          align-items: flex-start;
+        }
+        h2 {
+          margin: 0rem 0 0rem;
+          font-size: 1rem;
+          line-height: 1.2rem;
+          @include md {
+            width: 50%;
+            font-size: 1.1rem;
+            line-height: 1.3rem;
+          }
+          font-family: WeissenhofGrotesk-Regular, sans-serif;
+        }
+        .author {
+          @include md {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          }
+          img {
+            border-radius: 50%;
+            margin-right: 0;
+            display: none;
+            @include md {
+              display: block;
+              top: -0.6rem;
+              left: 0.6rem;
+              margin-bottom: -1rem;
+              position: relative;
+            }
+          }
+        }
+      }
+      .body {
+        display: none;
+        .QandA {
+          /* font-size: 0.9rem;
+                    line-height: 1.1rem; */
+          hr {
+            border: 1px solid $color-grey;
+            border-bottom: 0;
+            background: none;
+            margin: 1rem 0;
+            @include md {
+              display: none;
+            }
+          }
+          @include md {
+            display: flex;
+            align-items: flex-start;
+          }
+          margin-top: 1rem;
+          p {
+            @include md {
+              margin: 0rem 5% 0rem 0;
+              width: 45%;
+            }
+          }
+        }
+        .foot {
+          @include md {
+            display: flex;
+            align-items: flex-start;
+          }
+          border-top: 1px solid $color-grey;
+          margin-top: 1rem;
+          @include md {
+            margin-top: 2rem;
+          }
+          padding-top: 0.5rem;
+          p {
+            @include md {
+              margin: 0rem 5% 0rem 0;
+              width: 45%;
+            }
+            &.tags {
+              display: none;
+              @include md {
+                display: block;
+              }
+            }
+          }
+        }
+      }
+      &.open {
+        -webkit-box-shadow: 10px 10px 13px -7px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 10px 10px 13px -7px rgba(0, 0, 0, 0.5);
+        box-shadow: 10px 10px 13px -7px rgba(0, 0, 0, 0.5);
+        // transform: scale(1.02);
+        .body {
+          display: block;
+        }
+      }
+    }
+    .consultItem:hover {
+      // transform: scale(1.02);
+      // background-color: #f7f7f7;
+      -webkit-box-shadow: 10px 10px 13px -7px rgba(0, 0, 0, 0.5);
+      -moz-box-shadow: 10px 10px 13px -7px rgba(0, 0, 0, 0.5);
+      box-shadow: 10px 10px 13px -7px rgba(0, 0, 0, 0.5);
+      &.open {
+        // transform: scale(1.02);
+        background-color: white;
+        -webkit-box-shadow: 10px 10px 13px -7px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 10px 10px 13px -7px rgba(0, 0, 0, 0.5);
+        box-shadow: 10px 10px 13px -7px rgba(0, 0, 0, 0.5);
+      }
+    }
+    h3 {
+      margin: 2rem 0 1rem;
+    }
+    // p {
+    //   // margin: 0rem 0 0rem;
+    // }
+    .small {
+      font-size: 0.8rem;
+      /*   position: relative;
+            float: right;
+            margin-top: -2rem;
+            color: $color-grey; */
+    }
+    .tags {
+      margin: 1rem 1rem 0 0;
+    }
+    .faqFooter {
+      display: flex;
+      justify-content: space-between;
+      margin: 1rem 0rem 0 0;
+    }
+    .claps {
+      display: flex;
+      vertical-align: middle;
+      font-size: 0.8rem;
+      line-height: 2.3rem;
+      button {
+        margin-right: 0.5rem;
+      }
+    }
+    .socials {
+      display: flex;
+      .item {
+        margin: 0.5rem 0.2rem;
+        .bf {
+          margin-top: 0.1rem;
+        }
+      }
+    }
+  }
+}

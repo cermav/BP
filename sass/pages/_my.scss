@@ -1,0 +1,596 @@
+.my {
+  background-color: $color-prelude;
+  .hero {
+    background-color: $color-prelude;
+    margin: 0 auto;
+
+    .heroContent {
+      width: 100%;
+      max-width: none;
+      padding: 3rem 1rem 2rem 0;
+      p {
+        max-width: 100%;
+      }
+    }
+  }
+  main {
+    h2 {
+      font-size: 25px;
+      font-family: $font-bold;
+      padding: 0 1rem 0 0;
+    }
+    .landingPage {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 100px;
+      .pozadi {
+        margin-top: 2rem;
+        width: 100%;
+        visibility: hidden;
+        height: 3rem;
+        border-bottom-right-radius: 2.5rem;
+        border-bottom-left-radius: 2.5rem;
+        @include md {
+          visibility: visible;
+          height: unset;
+        }
+        @media (min-width: 1060px) {
+        }
+      }
+      .petContent {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        margin-top: 0;
+        .promoInfo {
+          width: 100%;
+          .promoInfoTop {
+            img {
+              width: 100%;
+            }
+          }
+        }
+        .promoTerms {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          width: 100%;
+          margin-top: 1rem;
+          .promoTermsTop {
+            flex: 1;
+            .terms {
+              img {
+                width: 100%;
+              }
+            }
+          }
+        }
+        @include md {
+          margin-top: -32.5vw;
+          flex-direction: row;
+          .promoInfo,
+          .promoTerms {
+            width: 47%;
+          }
+          .promoInfo {
+            margin-right: 1rem;
+          }
+          .promoTerms {
+            margin-top: 34.3vw;
+          }
+        }
+        @media (min-width: 1060px) {
+          margin-top: -20rem;
+          .promoTerms {
+            margin-top: 21rem;
+          }
+        }
+      }
+
+      .bottom {
+        margin-top: 0 !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .sticky {
+          width: 80%;
+        }
+      }
+      .text {
+        color: white;
+        font-weight: bolder;
+        padding-right: 20px;
+      }
+      .icon {
+        margin: 0px 20px 0px 20px;
+        z-index: 100;
+        width: 30px;
+        height: 30px;
+        @include md {
+          margin: 0px 25px 0px 25px;
+          width: 50px;
+          height: 50px;
+        }
+      }
+      .cardContent {
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #2c2c2c;
+        border-radius: 10px;
+        height: 100px;
+        .inner {
+          display: flex;
+          align-items: center;
+          position: relative;
+          z-index: 2;
+          font-size: 15px;
+          @include sm {
+            font-size: 18px;
+          }
+        }
+        &:before {
+          width: 2rem;
+          height: 2rem;
+          content: "";
+          display: block;
+          margin-top: -50px;
+          @include sm {
+            margin-top: -55px;
+          }
+          @include md {
+            margin-top: -40px;
+          }
+          -webkit-transform: rotate(-45deg);
+          -moz-transform: rotate(-45deg);
+          -ms-transform: rotate(-45deg);
+          -o-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+          background-color: #2c2c2c;
+          border-radius: 0.2rem;
+          z-index: 2;
+        }
+      }
+      .allText {
+        max-width: 478px;
+        margin-bottom: 10px;
+        font-size: 15px;
+        @include md {
+          font-size: 20px;
+        }
+        padding: 0px 10px 0px 10px;
+        margin-top: 20px;
+        color: white;
+      }
+    }
+    h2 {
+      color: white;
+    }
+    .nextFce {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      margin: 50px 0 100px 0;
+      .tile {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border-radius: 15px;
+        padding: 30px;
+        font-size: 20px;
+        font-weight: bolder;
+        width: 100%;
+        margin-bottom: 10px;
+        @include sm {
+          margin-right: 10px;
+          width: auto;
+        }
+      }
+      .records {
+        background-color: #c46867;
+        color: white;
+        -webkit-box-shadow: 10px 10px 12px -4px rgba(0, 0, 0, 0.29);
+        -moz-box-shadow: 10px 10px 12px -4px rgba(0, 0, 0, 0.29);
+        box-shadow: 10px 10px 12px -4px rgba(0, 0, 0, 0.29);
+      }
+      .stars {
+        background-color: #85b0b0;
+        color: white;
+        -webkit-box-shadow: 10px 10px 12px -4px rgba(0, 0, 0, 0.29);
+        -moz-box-shadow: 10px 10px 12px -4px rgba(0, 0, 0, 0.29);
+        box-shadow: 10px 10px 12px -4px rgba(0, 0, 0, 0.29);
+      }
+      .doctor {
+        background-color: #a4b8e6;
+        color: black;
+        -webkit-box-shadow: 10px 10px 12px -4px rgba(0, 0, 0, 0.29);
+        -moz-box-shadow: 10px 10px 12px -4px rgba(0, 0, 0, 0.29);
+        box-shadow: 10px 10px 12px -4px rgba(0, 0, 0, 0.29);
+      }
+      .bels {
+        background-color: #fb656c;
+        color: white;
+        -webkit-box-shadow: 10px 10px 12px -4px rgba(0, 0, 0, 0.29);
+        -moz-box-shadow: 10px 10px 12px -4px rgba(0, 0, 0, 0.29);
+        box-shadow: 10px 10px 12px -4px rgba(0, 0, 0, 0.29);
+      }
+      .dalsi {
+        color: white;
+        font-size: 20px;
+        font-weight: bolder;
+        margin-right: 10px;
+        margin-bottom: 10px;
+      }
+      .iconnext {
+        margin-right: 20px;
+      }
+    }
+    .page {
+      background-color: $color-prelude;
+    }
+
+    .heroIllustration {
+      display: none;
+    }
+  }
+}
+
+.rankingPage {
+  .page {
+    background-color: $color-soft-blue;
+  }
+
+  .hero {
+    min-height: 40rem;
+    background-color: $color-soft-blue;
+
+    .heroContent {
+      padding-bottom: 2rem;
+
+      p {
+        max-width: 100%;
+      }
+    }
+
+    .heroIllustration {
+      display: none;
+    }
+  }
+}
+
+.help {
+  .page {
+    background-color: $color-green;
+  }
+
+  .hero {
+    min-height: 40rem;
+    background-color: $color-green;
+
+    .heroContent {
+      padding-bottom: 2rem;
+
+      p {
+        max-width: 100%;
+      }
+    }
+
+    .heroIllustration {
+      display: none;
+    }
+  }
+}
+
+.petDetail {
+  main {
+    flex: 1;
+    .mainContainer {
+      max-width: none;
+      padding: 0;
+    }
+    .petDetailContainer {
+      width: 100%;
+      max-width: 60rem;
+      margin: 0 auto 2rem auto;
+      position: relative;
+      padding: 0 1rem;
+      @include sm {
+        padding: 0 2rem;
+      }
+      .deviceButtons {
+        position: relative;
+        top: 2rem;
+        margin: 0 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        @include sm {
+          top: 4rem;
+          margin: 0 3rem;
+        }
+        @include md {
+          display: none;
+        }
+        .addPet {
+          border: 2px solid #ce6668;
+          border-radius: 100%;
+          height: 2.5rem;
+          width: 2.5rem;
+        }
+        .switchPet {
+          padding: 0.5rem;
+          border: 2px solid #ce6668;
+          border-radius: 100%;
+          height: 2.5rem;
+          width: 2.5rem;
+        }
+      }
+      .topSection {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        @include md {
+          margin: 0 3rem;
+          flex-direction: row;
+          justify-content: space-between;
+        }
+        .rightSection {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          width: 100%;
+          @include md {
+            width: 50%;
+          }
+        }
+      }
+      .myVets,
+      .myLogs {
+        margin: 2rem 0 0;
+        @include md {
+          margin: 2rem 3rem 0 3rem;
+        }
+        .top {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding-bottom: 10px;
+          border-bottom: 1px solid black;
+          h3 {
+            margin-bottom: 10px;
+          }
+          @media (min-width: 371px) {
+            h3 {
+              margin-bottom: -2px;
+            }
+            padding-bottom: 5px;
+            flex-direction: row;
+            justify-content: space-between;
+          }
+          .editButton {
+            padding-top: 0.25rem;
+            .imageButton {
+              background-color: #dddd;
+              &:hover {
+                background-color: #bbbb;
+              }
+              img {
+                padding: 0;
+              }
+            }
+          }
+        }
+        .content {
+          display: flex;
+          flex-direction: column;
+          @include sm {
+            flex-direction: row;
+          }
+          a {
+            width: 100%;
+            @include sm {
+              width: 48%;
+              ~ a {
+                margin-left: 4%;
+              }
+            }
+            .tile {
+              display: flex;
+              background-repeat: no-repeat;
+              background-position-x: 90%;
+              background-position-y: 100%;
+              justify-content: space-between;
+              cursor: pointer;
+              margin-top: 1.5rem;
+              font-size: 1.3rem;
+              font-family: $font-bold;
+              height: 10rem;
+              box-sizing: border-box;
+              padding: 1rem 1rem 0 1rem;
+              color: white;
+              border-radius: 5px;
+              transition: 0.1s ease-in-out;
+              p {
+                align-self: flex-start;
+              }
+              .image {
+                align-self: flex-end;
+                width: 55%;
+                @media (min-width: 992px) {
+                  width: 70%;
+                }
+              }
+            }
+            .tile:hover {
+              transition: 0.1s ease-in-out;
+              opacity: 80%;
+            }
+            .logs {
+              background-color: #c7dbeb;
+            }
+            .records {
+              background-color: #d0bddd;
+            }
+          }
+        }
+      }
+      .myVets {
+        .vets {
+          margin-top: 1rem;
+          display: flex;
+          flex-wrap: wrap;
+          max-width: 100%;
+          flex-direction: column;
+          @include sm {
+            flex-direction: row;
+          }
+          .vetUnit {
+            width: 100%;
+            @include sm {
+              width: 48%;
+              ~ .vetUnit {
+                margin-left: 4%;
+                &:nth-of-type(2n + 1) {
+                  margin-left: 0;
+                }
+              }
+            }
+            @include lg {
+              width: 31%;
+              ~ .vetUnit {
+                margin-left: 3.5%;
+                &:nth-of-type(2n + 1) {
+                  margin-left: 3.5%;
+                }
+                &:nth-of-type(3n + 1) {
+                  margin-left: 0;
+                }
+              }
+            }
+          }
+          .vetMeta {
+            border-radius: 1rem;
+            margin-bottom: 2rem;
+            width: 100%;
+            margin: 0;
+            .stars {
+              margin-bottom: 8px;
+              transform: scale(0.7);
+              transform-origin: 0% 100%;
+              span {
+                display: flex;
+              }
+            }
+            .tags {
+              height: 32px;
+              overflow: hidden;
+              .tag.small {
+                padding: 2px 6px;
+                border: 1px solid $color-grey;
+                color: $color-dark-grey;
+                font-size: 0.7em;
+                line-height: 22px;
+              }
+            }
+            .imageWrap {
+              background-size: contain;
+              background-position: 50% 50%;
+              background-repeat: no-repeat;
+              margin: 0 0 0.5rem 0;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              cursor: pointer;
+              .image {
+                transition: all 0.1s ease-in-out;
+                display: block;
+                border-radius: 5px;
+                width: 100%;
+                height: 10rem;
+                background-size: cover;
+                background-position: 50% 50%;
+                background-repeat: no-repeat;
+                img {
+                  display: none;
+                }
+              }
+            }
+            .inactive {
+              pointer-events: none;
+              .image {
+                opacity: 20%;
+              }
+            }
+            .distance {
+              height: 24px;
+              margin-top: -24px;
+              font-size: 0.8rem;
+              position: relative;
+              text-align: right;
+            }
+          }
+          .vetMeta:hover {
+            .imageWrap {
+              .image {
+                opacity: 80%;
+              }
+            }
+            .inactive {
+              .image {
+                opacity: 20%;
+              }
+            }
+            h3 {
+              color: $color-valencia;
+            }
+          }
+          .addVet {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            min-height: 10rem;
+            @include sm {
+              width: 48%;
+              margin: 0 1%;
+            }
+            @include lg {
+              width: 31%;
+            }
+            .plus {
+              margin-left: calc(50% - 75px / 2);
+              border-radius: 100%;
+              width: 75px;
+              cursor: pointer;
+              opacity: 0.7;
+              transition: all 0.1s ease-in-out;
+              &:hover {
+                transition: all 0.1s ease-in-out;
+                opacity: 1;
+              }
+            }
+          }
+          .removeVet {
+            margin: 0 auto;
+            position: absolute;
+            cursor: pointer;
+            pointer-events: all;
+            opacity: 80%;
+            width: 100px;
+            height: 100px;
+            z-index: 5;
+          }
+          .hidden {
+            visibility: hidden;
+          }
+          .removeVet:hover {
+            transition: all 0.2s ease-in-out;
+            opacity: 100%;
+          }
+        }
+      }
+    }
+  }
+}

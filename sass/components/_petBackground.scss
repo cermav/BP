@@ -1,0 +1,84 @@
+.petBackground {
+  font-family: "WeissenhofGrotesk", sans-serif;
+  visibility: hidden;
+  height: 2rem;
+  position: relative;
+  width: 100%;
+  @include md {
+    visibility: visible;
+    height: 20rem;
+    margin-bottom: 2rem;
+  }
+  .background {
+    width: 100%;
+    height: 100%;
+    border-bottom-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    background-repeat: no-repeat;
+    //background-size: cover;
+    background-size: 100% 100%;
+    //background-position: 50% 50%;
+  }
+  img {
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+  }
+
+  .vaccineBackground,
+  .recordsBackground {
+    width: 100%;
+    height: 100%;
+    border-bottom-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .actions {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    max-width: $containerWidth;
+    height: 100%;
+    transform: translateX(-50%);
+
+    .top {
+      margin-top: 2rem;
+    }
+    .top,
+    .bottom {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      &:not(:last-child) {
+        z-index: 1;
+      }
+
+      .flexContainer {
+        display: flex;
+        justify-content: flex-end;
+        flex-flow: row wrap;
+        align-items: flex-start;
+        padding: 0 calc(1.5rem - 5px);
+        width: 50%;
+        .imageButton {
+          margin: 5px;
+        }
+      }
+    }
+
+    @media (min-width: 768px) {
+      .bottom {
+        position: absolute;
+        bottom: 1rem;
+      }
+    }
+  }
+  img {
+    width: 100%;
+    object-fit: cover;
+    border-bottom-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+  }
+}

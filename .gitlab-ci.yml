@@ -1,0 +1,37 @@
+image: burten/ubuntu-php-node
+
+stages:
+  - deploy
+
+deploy:
+  stage: deploy
+  script:
+    - "which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )"
+    - eval $(ssh-agent -s)
+    - ssh-add <(echo "$SSH_PRIVATE_KEY")
+    - mkdir -p ~/.ssh
+    - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+
+    - rsync -hrvz -e ssh . deployer@10.0.0.9:/var/www/drmouse-next
+
+    # pm2 start yarn --name "drmouse-staging" -- start --watch
+    - rsync -hrvz --exclude .git/ --delete --filter 'protect .env' --filter 'protect node_modules/' -e  ssh . deployer@10.0.0.9:/var/www/drmouse-next
+    - ssh deployer@10.0.0.9 "cd /var/www/drmouse-next/; pm2 stop drmouse-staging; yarn; yarn build; pm2 restart drmouse-staging --watch"
+
+  only:
+    - master
+
+develop_deploy:
+  stage: deploy
+  script:
+    - "which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )"
+    - eval $(ssh-agent -s)
+    - ssh-add <(echo "$SSH_PRIVATE_KEY")
+    - mkdir -p ~/.ssh
+    - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+
+    - rsync -hrvz --exclude .git/ --delete --filter 'protect .env' --filter 'protect node_modules/' -e ssh . deployer@10.0.0.9:/var/www/drmouse-develop/client
+    - ssh deployer@10.0.0.9 "cd /var/www/drmouse-develop/client/; pm2 stop drmouse-develop; yarn; yarn build; pm2 restart drmouse-develop --watch"
+
+  only:
+    - develop

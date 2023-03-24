@@ -1,0 +1,33 @@
+.blocks{
+  display:flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width:100%;
+  .block{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    text-align: left;
+    text-align: center;
+    width:100%;
+    
+    margin: 1rem 0;
+    @include sm{
+      width:45%;
+      margin: 2rem 0;
+    }
+    @include md{
+    }
+    @include lg{
+      margin: 3rem 0;
+      width:30%;
+    }
+    .blockTitle{
+      width:100%;
+      margin-bottom:1rem;
+    }
+    .blockText{
+      margin-bottom:1rem;
+    }
+  }
+}

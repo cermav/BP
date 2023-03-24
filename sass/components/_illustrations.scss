@@ -1,0 +1,36 @@
+.illustration{
+  display:block;
+  width:220px;
+  height:220px;
+  background:url('./images/ikonky_sprite.png') no-repeat center;
+  line-height: 9999px;
+  overflow:hidden;
+  @include retina{
+    background-size:1828px 269px;
+    background-image:url('./images/ikonky_sprite@2x.png');
+  }
+  &.list{
+    background-position: -1px -23px;
+  }
+  &.stars{
+    background-position: -1608px -23px;
+  }
+  &.mobile{
+    background-position: -918px -23px;
+  }
+  &.animals{
+    background-position: -231px -23px;
+  }
+  &.pig{
+    background-position: -1148px -23px;
+  }
+  &.help{
+    background-position: -1379px -23px;
+  }
+  &.mouse{
+    background-position: -458px -23px;
+  }
+  &.dog{
+    background-position: -682px -23px;
+  }
+}

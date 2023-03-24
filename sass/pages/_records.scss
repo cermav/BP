@@ -1,0 +1,400 @@
+.records {
+  main {
+    flex: 1;
+    .mainContainer {
+      max-width: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      .recordsContainer {
+        width: 100%;
+        max-width: 60rem;
+        margin: 0 auto 2rem auto;
+        padding: 0 1rem;
+        position: relative;
+        @include sm {
+          padding: 0 2rem;
+          display: unset;
+        }
+        .topSection {
+          .petInfo {
+            a {
+              position: relative;
+            }
+          }
+          @include md {
+            margin: 0 3rem;
+            padding-right: 3rem;
+          }
+        }
+        .tableTop {
+          margin-bottom: 1rem;
+          display: flex;
+          clear: both;
+          justify-content: space-between;
+          @include md {
+            align-items: center;
+            margin-top: 2rem;
+          }
+          @media (min-width: 1060px) {
+            height: 70px;
+          }
+          .recordsButtons {
+            order: -1;
+            margin-bottom: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 100%;
+            @include md {
+              margin-bottom: 0;
+            }
+            .holder {
+              display: flex;
+              margin: 5px 0;
+              justify-content: center;
+              @media (min-width: 400px) {
+                justify-content: flex-start;
+              }
+              @include md {
+                flex: 1;
+                margin: 0;
+              }
+            }
+            h1 {
+              order: 1;
+              font-size: 1.8rem;
+              margin-top: 2rem;
+              padding: 0 1px;
+              text-align: center;
+              width: 100%;
+              @include md {
+                width: unset;
+                flex: 1;
+                order: 0;
+                margin-top: 0;
+              }
+              @include lg {
+                white-space: nowrap;
+              }
+            }
+            a {
+              display: flex;
+              justify-content: center;
+              margin: 5px 0;
+              @media (min-width: 400px) {
+                flex: unset;
+                justify-content: flex-end;
+              }
+              @include md {
+                flex: 1;
+                margin: 0;
+              }
+            }
+          }
+        }
+        .recordsList {
+          display: flex;
+          flex-direction: column;
+          .firstRow,
+          .row {
+            margin: 0.5rem;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            border-radius: 36px;
+            @include sm {
+              margin: 0.5rem 0rem;
+            }
+            @include md {
+              border-radius: 42px;
+            }
+            .name,
+            .description {
+              word-break: break-word;
+              flex: 2;
+
+              @include sm {
+                margin-right: 2rem;
+              }
+              @include lg {
+                flex: 4;
+              }
+            }
+            .description {
+              font-size: 1.17em;
+            }
+            .date {
+              @include sm {
+                white-space: nowrap;
+              }
+              flex: 1;
+            }
+            .placeHolder,
+            .icons {
+              display: none;
+              @include lg {
+                display: flex;
+                margin-left: 1rem;
+                flex: 0.75;
+                position: relative;
+                right: -1.4rem;
+              }
+              .sign {
+                opacity: 1;
+                transition: 0.1s ease-in-out;
+                &:hover {
+                  transition: 0.1s ease-in-out;
+                  opacity: 0.8;
+                }
+              }
+            }
+          }
+          .firstRow {
+            line-height: 1rem;
+            padding: 0 2rem;
+            color: #969696;
+          }
+          .row {
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: white;
+            transition: all 0.2s ease-in-out;
+            .active {
+              cursor: pointer;
+              &:hover {
+                transition: all 0.2s ease-in-out;
+              }
+            }
+            .basic {
+              cursor: pointer;
+              padding: 1rem 2rem;
+              border-radius: 36px;
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              @include sm {
+                flex-direction: row;
+                justify-content: space-between;
+              }
+              @include md {
+                border-radius: 42px;
+              }
+              .description,
+              .date {
+                @include lg {
+                  margin-top: 0.45rem;
+                }
+              }
+            }
+            .advanced {
+              display: none;
+            }
+            .description {
+              font-family: $font-bold;
+            }
+            .date {
+              @include sm {
+                white-space: nowrap;
+              }
+            }
+            .icons {
+              justify-content: flex-end;
+              align-items: flex-start;
+              .sign {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-right: 0.6rem;
+                border-radius: 100%;
+                background-color: #ce6668;
+                cursor: pointer;
+                img {
+                  box-sizing: content-box;
+                  padding: 0.6rem;
+                  width: 1.1rem;
+                  min-width: 1.1rem;
+                  min-height: 1.1rem;
+                  height: 1.1rem;
+                }
+              }
+            }
+          }
+          .open {
+            .active {
+              &:hover {
+                transition: all 0.2s ease-in-out;
+                -webkit-box-shadow: none;
+                -moz-box-shadow: none;
+                box-shadow: none;
+              }
+            }
+            .basic {
+              border-top-left-radius: 38px;
+              border-top-right-radius: 38px;
+              border-bottom-left-radius: 0px;
+              border-bottom-right-radius: 0px;
+              @include md {
+                border-top-left-radius: 38px;
+                border-top-right-radius: 38px;
+              }
+              @media (min-width: 1440px) {
+                border-top-left-radius: 38px;
+                border-top-right-radius: 38px;
+              }
+            }
+            .advanced {
+              display: flex;
+              flex-direction: column;
+              padding: 0 2rem 2rem;
+              justify-content: space-between;
+              width: 100%;
+              background-color: white;
+              border-bottom-left-radius: 2rem;
+              border-bottom-right-radius: 2rem;
+              .content {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                @include sm {
+                  flex-direction: row;
+                  justify-content: flex-start;
+                  flex-wrap: wrap;
+                }
+                .icons {
+                  display: flex;
+                  justify-content: flex-start;
+                  order: 3;
+                  margin-top: 1.5rem;
+                  width: 100%;
+                  @include lg {
+                    display: none;
+                  }
+                }
+                .left,
+                .center,
+                .right {
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: flex-start;
+                  @include md {
+                    min-width: 0;
+                    width: auto;
+                  }
+                  .head {
+                    font-family: $font-bold;
+                    font-size: 1.17em;
+                    color: #969696;
+                    margin: 1.5rem 0;
+                  }
+                }
+                .left {
+                  @include sm {
+                    flex: 2;
+                    margin-right: 2rem;
+                  }
+                  .vetMeta {
+                    margin-bottom: 0;
+                    width: unset;
+                    flex: 1;
+                    margin-right: 0;
+                  }
+                }
+                .center {
+                  color: #969696;
+                  display: flex;
+                  flex-direction: column;
+                  order: 1;
+                  width: 100%;
+                  @include md {
+                    &:first-child {
+                      order: -1;
+                      flex: 2;
+                      margin-right: 2rem;
+                      .flex-content {
+                        flex-direction: row;
+                        .infos,
+                        .notes {
+                          flex: 1;
+                        }
+                      }
+                    }
+                  }
+                  @include lg {
+                    flex: 2;
+                    order: 0;
+                    margin-right: 2rem;
+                    &:first-child {
+                      flex: 4.25;
+                    }
+                  }
+                  .notes {
+                    padding-top: 10px;
+                  }
+                  .infoRow {
+                    width: 100%;
+                    display: flex;
+                    margin: 5px 0;
+                  }
+                }
+                .right {
+                  flex-direction: column;
+                  color: #969696;
+                  flex: 1;
+                  min-width: 31%;
+                  @include md {
+                    display: initial;
+                    min-width: auto;
+                    flex: 1;
+                  }
+                  @include lg {
+                    flex: 2;
+                  }
+                  .fileHolder {
+                    margin: 0.1rem 0;
+                    cursor: pointer;
+                  }
+                }
+              }
+            }
+          }
+          .row {
+            .basic {
+              .sign {
+                &:hover {
+                  transition: 0.1s ease-in-out;
+                  opacity: 0.8;
+                }
+              }
+            }
+            .advanced {
+              .line {
+                min-width: 50%;
+                border-top: solid 1px #dddd;
+              }
+            }
+          }
+          .rowClose {
+            .basic {
+              color: white;
+              background-color: #ce6668;
+            }
+            .advanced {
+              border-top: solid white 1px;
+              .doctor {
+                background-color: white;
+                border: 1px solid white;
+              }
+            }
+            .icons {
+              .sign {
+                background-color: white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

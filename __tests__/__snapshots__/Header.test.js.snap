@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches previous snapshot 1`] = `
+<DocumentFragment>
+  <header
+    class="header "
+    id="header"
+  >
+    <div
+      class="container wide headerInner"
+    >
+      <div
+        class="left"
+      >
+        <a
+          class="logo headerLogo"
+          href="/"
+        >
+          Dr.Mouse
+        </a>
+        <nav
+          class="menu"
+          id="menuToggle"
+        >
+          <input
+            type="checkbox"
+          />
+          <div
+            class="hamburger"
+          >
+            <span />
+            <span />
+            <span />
+          </div>
+          <ul
+            id="menu"
+          >
+            <li>
+              <a
+                class=""
+                href="/vets"
+              >
+                Veterináři
+              </a>
+            </li>
+            <li>
+              <a
+                class=""
+                href="/blog"
+              >
+                Blog
+              </a>
+            </li>
+            <li>
+              <a
+                class=""
+                href="/moje-zver"
+              >
+                Moje zvěř
+              </a>
+            </li>
+            <li>
+              <a
+                class=""
+                href="/app"
+              >
+                Aplikace
+              </a>
+            </li>
+            <li>
+              <a
+                class=""
+                href="/about"
+              >
+                O nás
+              </a>
+            </li>
+            <li
+              class="userMenu"
+            >
+              <a
+                class="button"
+                href="/login"
+              >
+                Přihlásit
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+</DocumentFragment>
+`;

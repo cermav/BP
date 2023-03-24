@@ -1,0 +1,471 @@
+.vaccines {
+  main {
+    flex: 1;
+    .mainContainer {
+      max-width: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      .vaccinesContainer {
+        width: 100%;
+        max-width: 60rem;
+        margin: 0 auto 2rem auto;
+        padding: 0 1rem;
+        position: relative;
+        @include sm {
+          padding: 0 2rem;
+          display: unset;
+        }
+        .topSection {
+          .petInfo {
+            a {
+              position: relative;
+            }
+          }
+          @include md {
+            margin: 0 3rem;
+            padding-right: 3rem;
+          }
+        }
+        .tableTop {
+          margin-bottom: 1rem;
+          display: flex;
+          clear: both;
+          justify-content: space-between;
+          @include md {
+            align-items: center;
+            margin-top: 2rem;
+          }
+          @media (min-width: 1060px) {
+            height: 70px;
+          }
+          .vaccinesButtons {
+            order: -1;
+            margin-bottom: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 100%;
+            @include md {
+              margin-bottom: 0;
+            }
+            .holder {
+              display: flex;
+              margin: 5px 0;
+              justify-content: center;
+              @media (min-width: 400px) {
+                justify-content: flex-start;
+              }
+              @include md {
+                flex: 1;
+                margin: 0;
+              }
+            }
+            h1 {
+              order: 1;
+              font-size: 1.8rem;
+              margin-top: 2rem;
+              padding: 0 1px;
+              text-align: center;
+              width: 100%;
+              @include md {
+                width: unset;
+                flex: 1;
+                order: 0;
+                margin-top: 0;
+              }
+              @include lg {
+                white-space: nowrap;
+              }
+            }
+            a {
+              display: flex;
+              justify-content: center;
+              margin: 5px 0;
+              @media (min-width: 400px) {
+                flex: unset;
+                justify-content: flex-end;
+              }
+              @include md {
+                flex: 1;
+                margin: 0;
+              }
+            }
+          }
+        }
+        .vaccinesList {
+          display: flex;
+          flex-direction: column;
+          .firstRow,
+          .row,
+          .rowClose {
+            margin: 0.5rem;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            border-radius: 36px;
+            @include sm {
+              margin: 0.5rem 0rem;
+            }
+            @include md {
+              border-radius: 42px;
+            }
+            .name,
+            .description {
+              word-break: break-word;
+              flex: 2;
+              @include sm {
+                margin-right: 2rem;
+              }
+              @include md {
+                flex: 3;
+              }
+              @include lg {
+                flex: 2;
+              }
+            }
+            .description {
+              font-size: 1.17em;
+            }
+            .date {
+              flex: 1;
+              //display: none;
+              @include lg {
+                flex: 2;
+              }
+              @include xl {
+                flex: 1.5;
+                display: initial;
+              }
+              &:nth-of-type(2) {
+                @include xl {
+                  text-align: left;
+                }
+                display: initial;
+              }
+            }
+            .placeHolder,
+            .icons {
+              display: none;
+              @include lg {
+                display: flex;
+                flex: 1;
+                justify-content: flex-end;
+                margin-left: 2rem;
+              }
+              @include lg {
+                flex: 0.75;
+              }
+              .sign {
+                opacity: 1;
+                transition: 0.1s ease-in-out;
+                &:hover {
+                  transition: 0.1s ease-in-out;
+                  opacity: 0.8;
+                }
+              }
+            }
+          }
+          .firstRow {
+            padding: 0 2rem;
+            color: #969696;
+            line-height: 1rem;
+          }
+          .row,
+          .rowClose {
+            flex-direction: column;
+            background-color: white;
+            .active {
+              cursor: pointer;
+            }
+
+            .description {
+              font-family: $font-bold;
+            }
+            .date,
+            .interval {
+              @include sm {
+                white-space: nowrap;
+              }
+            }
+            .icons {
+              @include lg {
+                position: relative;
+                right: -1.4rem;
+              }
+              .sign {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-right: 0.6rem;
+                border-radius: 100%;
+                background-color: #ce6668;
+                cursor: pointer;
+                img {
+                  box-sizing: content-box;
+                  padding: 0.6rem;
+                  width: 1.1rem;
+                  min-width: 1.1rem;
+                  min-height: 1.1rem;
+                  height: 1.1rem;
+                }
+              }
+            }
+          }
+          .basic {
+            cursor: pointer;
+            padding: 1rem 2rem;
+            border-radius: 36px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            @include sm {
+              flex-direction: row;
+              justify-content: space-between;
+            }
+            @include md {
+              border-radius: 42px;
+            }
+            .description,
+            .date,
+            .interval {
+              @include lg {
+                margin-top: 0.45rem;
+              }
+            }
+          }
+          .advanced {
+            display: none;
+          }
+          .open {
+            .basic {
+              border-top-left-radius: 38px;
+              border-top-right-radius: 38px;
+              border-bottom-left-radius: 0px;
+              border-bottom-right-radius: 0px;
+              @include md {
+                border-top-left-radius: 2.2rem;
+                border-top-right-radius: 2.2rem;
+              }
+              @media (min-width: 1440px) {
+                border-top-left-radius: 42px;
+                border-top-right-radius: 42px;
+              }
+            }
+            .advanced {
+              display: flex;
+              flex-direction: column;
+              padding: 0 2rem 2rem;
+              justify-content: space-between;
+              width: 100%;
+              background-color: white;
+              border-bottom-left-radius: 2rem;
+              border-bottom-right-radius: 2rem;
+              .content {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                @include sm {
+                  flex-direction: row;
+                  justify-content: flex-start;
+                  flex-wrap: wrap;
+                }
+                .icons {
+                  display: flex;
+                  order: 3;
+                  margin-top: 1.5rem;
+                  width: 100%;
+                  @include lg {
+                    display: none;
+                  }
+                }
+                .left,
+                .center,
+                .right {
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: flex-start;
+                  @include md {
+                    min-width: 0;
+                    width: auto;
+                  }
+                  .head {
+                    font-family: $font-bold;
+                    font-size: 1.17em;
+                    color: #969696;
+                    margin: 1.5rem 0;
+                  }
+                }
+                .left {
+                  @include sm {
+                    flex: 2;
+                    margin-right: 2rem;
+                  }
+                  .vetMeta {
+                    margin-bottom: 0;
+                    width: unset;
+                    flex: 1;
+                    margin-right: 0;
+                  }
+                }
+                .center {
+                  color: #969696;
+                  display: flex;
+                  flex-direction: column;
+                  @include sm {
+                    flex: 1;
+                  }
+                  @include md {
+                    margin-right: 2rem;
+                    &:first-child {
+                      flex: 3.25;
+                      .flex-content {
+                        flex-direction: row;
+                        .infos,
+                        .notes {
+                          flex: 1;
+                        }
+                      }
+                    }
+                  }
+                  @include lg {
+                    flex: 2;
+                    &:first-child {
+                      flex: 4.25;
+                    }
+                  }
+                  @include xl {
+                    flex: 3;
+                    &:first-child {
+                      flex: 5.25;
+                    }
+                  }
+                  .flex-content {
+                    display: flex;
+                    @include lg {
+                      flex-direction: column;
+                    }
+                    .infos {
+                      display: flex;
+                      flex-wrap: wrap;
+                      @include sm {
+                        flex-direction: column;
+                      }
+                      @include lg {
+                        flex-direction: row;
+                      }
+                      .info {
+                        margin-right: 2rem;
+                        display: flex;
+                        flex-direction: column;
+                        margin-bottom: 1rem;
+                        @include sm {
+                          @media (max-width: 991px) {
+                            margin-right: 0;
+                          }
+                        }
+                        .label {
+                          font-family: $font-bold;
+                        }
+                      }
+                    }
+                    .notes {
+                      display: unset;
+                      @media (max-width: 991px) {
+                        display: none;
+                      }
+                    }
+                  }
+                }
+                .notes {
+                  color: #969696;
+                  width: 100%;
+                  @media (min-width: 991px) {
+                    display: none;
+                  }
+                  .label {
+                    font-family: $font-bold;
+                  }
+                }
+                .outside {
+                  margin-top: 2rem;
+                }
+                .right {
+                  color: #969696;
+                  display: none;
+                  @include md {
+                    flex: 1;
+                    display: flex;
+                    align-items: flex-end;
+                    min-width: auto;
+                    @include lg {
+                      flex: 0.75;
+                    }
+                  }
+                  .head {
+                    text-align: center;
+                  }
+                  .inner {
+                    width: 6rem;
+                  }
+                  .vaccine {
+                    display: flex;
+                    flex-direction: row;
+                    width: 100%;
+                    height: 100%;
+                    justify-content: center;
+                    align-items: flex-start;
+                    .image {
+                      flex: 1;
+                      display: flex;
+                      flex-direction: column;
+                      justify-content: center;
+                      align-items: center;
+                      background-size: contain;
+                      background-repeat: no-repeat;
+                      text-align: center;
+                      color: black;
+                      padding: 0 1rem;
+                      height: 15rem;
+                      font-size: 0.75em;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .row {
+            .basic {
+              .sign {
+                &:hover {
+                  transition: 0.1s ease-in-out;
+                  opacity: 0.8;
+                }
+              }
+            }
+            .advanced {
+              .line {
+                min-width: 50%;
+                margin: 0 1rem;
+                border-top: solid 1px #dddd;
+              }
+            }
+          }
+          .rowClose {
+            .basic {
+              background-color: hsl(359, 51%, 85%);
+            }
+            .advanced {
+              border-top: solid white 1px;
+              .left {
+                background-color: white;
+                border: 1px solid white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

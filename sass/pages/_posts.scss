@@ -1,0 +1,187 @@
+.posts {
+  .tagsBlog {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    // min-height: 3.4rem;
+    @include mdx {
+      min-height: 0;
+    }
+    .tagBlog {
+      margin-right: 5px;
+      // max-height: 1.6rem;
+      margin-top: 5px;
+      border: 1px solid #373737;
+      font-size: 14px;
+      color: #373737;
+      padding-left: 10px;
+      padding-right: 10px;
+      // background-color: #373737;
+      border-radius: 20px;
+    }
+  }
+  .header {
+    background-color: $color-blue;
+  }
+  .page {
+    background-color: $color-white;
+    color: $color-black;
+  }
+  .hero {
+    min-height: 0;
+    background-color: $color-white;
+    color: $color-black;
+    .heroContent {
+      padding-top: 4rem;
+      color: $color-black;
+      width: 100%;
+      max-width: 50rem;
+      padding-bottom: 0rem;
+      p {
+        max-width: 100%;
+        margin-bottom: 0;
+      }
+    }
+    .heroIllustration {
+      display: none;
+    }
+  }
+  .postTeasers {
+    width: 100%;
+    color: $color-black;
+    margin: 2rem 0 2rem;
+    min-height: 22rem;
+    @include sm {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+    .postTeasersItem {
+      margin-bottom: 2rem;
+      width: 100%;
+      @include sm {
+        width: 48%;
+        margin-right: 2%;
+      }
+      @include lg {
+        width: 31%;
+        margin-right: 2%;
+      }
+      .image {
+        transition: all 0.2s ease-in-out;
+        display: block;
+        width: 100%;
+        height: 10rem;
+        background-size: cover;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-color: $color-vulcano;
+        margin: 1rem 0px 1rem 0px;
+        border-radius: 0.3rem;
+        img {
+          display: none;
+          width: 100%;
+          height: auto;
+          clear: both;
+        }
+      }
+      .image:hover {
+        opacity: 90%;
+      }
+      h2 {
+        line-height: 1em;
+        margin: 1rem 0 0.5rem;
+        height: 2em;
+        overflow: hidden;
+        display: table-cell;
+        vertical-align: top;
+        a {
+          transition: all 0.2s ease-in-out;
+        }
+      }
+      .perEx {
+        position: relative;
+        max-height: 4.8rem;
+        overflow: hidden;
+        font-size: 0.9rem;
+        line-height: 1.2rem;
+        .read-more {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          text-align: center;
+          margin: 0;
+          padding: 30px 0;
+          text-indent: 9999px;
+          //   background-image: linear-gradient(to bottom, transparent, white);
+          span {
+            background: $color-blue;
+            color: $color-black;
+            border-radius: 5px;
+            padding: 0.3rem 0.6rem;
+          }
+        }
+      }
+    }
+    .postTeasersItem:hover {
+      .image {
+        opacity: 90%;
+        // transform: scale(1.05);
+      }
+      a {
+        color: $color-blue;
+      }
+    }
+  }
+  .fullArticle {
+    max-width: 50rem;
+    padding: 0rem 0 3rem;
+    color: $color-black;
+    font-size: 1.1em;
+    line-height: 1.4em;
+    img {
+      //      float: left;
+      width: 100%;
+      height: auto;
+      clear: both;
+      margin: 1rem 1rem 1rem 0px;
+      &.floatLeft {
+        width: auto;
+        float: left;
+        margin: 0rem 1rem 0rem 0px;
+      }
+      &.floatRight {
+        width: auto;
+        float: right;
+        margin: 0rem 1rem 0rem 0px;
+      }
+    }
+
+    h2,
+    h3 {
+      a:hover {
+        color: $color-valencia;
+      }
+    }
+    h1,
+    h2,
+    h3 {
+      margin: 2rem 0 0rem;
+      line-height: 1em;
+    }
+    p {
+      margin: 2rem 0 0rem;
+    }
+    a {
+      text-decoration: underline;
+    }
+    ul {
+      margin-top: 1rem;
+      li {
+        margin-left: 1rem;
+        list-style: disc;
+      }
+    }
+  }
+}

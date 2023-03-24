@@ -1,0 +1,19 @@
+.priceList {
+  input {
+  }
+  .priceList-header {
+    display: flex;
+  }
+
+  .tag {
+    text-align: center;
+  }
+
+  .description {
+    flex: 2;
+  }
+
+  .price, .currency, .display, .buttonPlaceholder, .removeRowButton {
+    flex: 1;
+  }
+}

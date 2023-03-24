@@ -1,0 +1,54 @@
+.registrationPromo {
+    position: relative;
+    width: 100%;
+    height: 34vw;
+    min-height: 20rem;
+    padding-top: 4rem;
+    background: url("./images/psik_pozadi.png") no-repeat center bottom / cover;
+    color: $color-white;
+    overflow: hidden;
+
+    .registrationPromoContent {
+        width: 100%;
+        position: relative;
+        z-index: 2;
+        @include md {
+            width: 60%;
+        }
+        max-width: 20rem;
+
+        .asH1,
+        p {
+            margin-bottom: 2rem;
+        }
+    }
+
+    .registrationPromoIllustration {
+        position: absolute;
+        //    min-height:20rem;
+        bottom: -1vw;
+        width: 130%;
+        right: -52vw;
+        height: 60vw;
+        @include sm {
+            bottom: -2vw;
+            width: 118vw;
+        }
+        @include md {
+            bottom: -3vw;
+            right: -32vw;
+        }
+        background-size: cover;
+        background-position: left bottom;
+        background: url("./images/psik_motiv.png") no-repeat right bottom / contain;
+        z-index: 1;
+    }
+}
+.registrationPromoEmpty {
+    position: relative;
+    width: 100%;
+    /* height: 215px;
+   padding-top: 10px; */
+    color: $color-white;
+    overflow: hidden;
+}

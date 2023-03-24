@@ -1,0 +1,114 @@
+h3 {
+  font-weight: 300;
+  font-family: $font-bold;
+  .imageButton {
+    padding: 0;
+    img {
+      margin-left: 0;
+    }
+  }
+}
+
+.editButton {
+  .imageButton {
+    img {
+      margin-right: 0;
+    }
+  }
+}
+.imageButton {
+  font-family: "WeissenhofGrotesk", sans-serif;
+  display: flex;
+  align-items: center;
+  border-radius: 42px;
+  padding: 0.5rem;
+  transition: 0.1s ease-in-out;
+  .text {
+    font-family: $font-bold;
+    margin: 0 0.5rem;
+    white-space: nowrap;
+    font-size: 16px;
+    line-height: 16px;
+  }
+  img {
+    object-fit: contain;
+    height: 16px;
+    width: auto;
+    padding: 1px;
+    margin: 0 0.5rem;
+    border-radius: 0;
+  }
+}
+.imageButton:hover {
+  transition: 0.1s ease-in-out;
+}
+.dark {
+  background-color: rgba(0, 0, 0, 0.15);
+  transition: 0.1s ease-in-out;
+}
+.dark:hover {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+.sectionHeader {
+  .text {
+    font-size: 1.17em;
+    font-family: $font-bold;
+  }
+  img {
+    height: 1.5em;
+    box-sizing: content-box;
+  }
+}
+.tableButtons {
+  color: #404140;
+  background-color: #dddd;
+  padding: 10px 20px;
+  .text {
+    font-size: 18px;
+    line-height: 18px;
+  }
+  img {
+    height: 18px;
+  }
+  &:hover {
+    background-color: #cccc;
+  }
+}
+.left {
+  img {
+    order: -1;
+  }
+}
+.input-file {
+  padding: 0 0.5rem;
+  align-items: center;
+  @include smx {
+    padding: 0 2rem;
+  }
+  img {
+    margin: 0;
+    height: 29px;
+    order: -1;
+  }
+}
+.file {
+  padding: 0.25rem 0;
+  align-items: flex-start;
+  :first-child {
+    margin-left: 0;
+  }
+  .text {
+    font-family: "WeissenhofGrotesk-Regular";
+    font-size: 20px;
+    line-height: 20px;
+    padding-top: 5px;
+    white-space: pre-line;
+    word-break: break-word;
+  }
+  img {
+    margin-left: 0;
+    margin-right: 0.5rem;
+    height: 29px;
+    order: -1;
+  }
+}

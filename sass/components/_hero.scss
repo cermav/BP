@@ -1,0 +1,75 @@
+.hero {
+    min-height: 10rem;
+    position: relative;
+    width: 100%;
+    padding-top: $paddingTop;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: cover;
+    background-color: $color-neptune;
+    @include xl {
+    }
+
+    .heroContent {
+        width: 100%;
+        @include md {
+            width: 80%;
+        }
+        @include lg {
+            width: 60%;
+        }
+        max-width: 783px;
+        padding-top: 3rem;
+        color: $color-white;
+        font-size: 1.1em;
+        line-height: 1.5em;
+
+        h1 {
+            margin-bottom: 43px;
+        }
+
+        p {
+            width: 100%;
+            max-width: 603px;
+            margin-bottom: 44px;
+        }
+        ul {
+            margin-top: -22px;
+            margin-bottom: 22px;
+        }
+        li {
+            list-style: disc;
+            list-style-position: outside;
+            padding-left: 0.2rem;
+            margin-left: 1rem;
+        }
+    }
+
+    .heroIllustration {
+        position: absolute;
+        right: 0;
+        bottom: 45px;
+        right: 0; //calc((100% - #{$containerWidth}) / 2);
+        height: calc(100% - #{$paddingTop});
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        background-size: contain;
+        width: 85%;
+        @include md {
+            width: 60%;
+        }
+        @include xl {
+        }
+    }
+}
+.fakeHero {
+    height: 3.5rem;
+    @include sm {
+        height: 4.5rem;
+    }
+    @include md {
+        height: 5.5rem;
+    }
+
+    background: $color-blue;
+}

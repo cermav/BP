@@ -1,0 +1,15 @@
+.profilePicture{
+    width:120px;
+    height:120px;
+    background-color:$color-blue;
+    background-image:url('./images/ig.svg');
+    background-size:50%;
+    background-repeat:no-repeat;
+    background-position: center;
+    border:5px solid $color-white;
+    border-radius:50%;
+    box-shadow: 2px 2px 2px 2px rgba(96, 98, 100, 0.4);
+    overflow:hidden;
+    cursor:pointer;
+    margin:2rem 0rem 2rem;
+}

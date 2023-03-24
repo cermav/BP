@@ -1,0 +1,139 @@
+@import "[slug]";
+@import "admin";
+@import "app";
+@import "appointments";
+@import "calendar";
+@import "consulting";
+@import "contact";
+@import "home";
+@import "my";
+@import "pet-create";
+@import "posts";
+@import "profile";
+@import "records";
+@import "vaccines";
+@import "vets";
+
+.page {
+  position: relative;
+  min-height: 100vh;
+  .pageMain {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: calc(290px + 3.5rem);
+    @include sm {
+      padding-bottom: calc(230px + 2rem);
+    }
+    @include md {
+      padding-bottom: calc(155px + 5rem);
+    }
+    @include lg {
+      padding-bottom: calc(130px + 7rem);
+    }
+  }
+}
+
+.textDoc {
+  .profileWrapper {
+    padding: 2rem 0 1rem;
+  }
+  h1 {
+    margin: 1rem 0 2rem;
+  }
+  p {
+    margin: 1rem 0 2rem;
+  }
+  .mainContainer {
+    ul li {
+      list-style: disc;
+      margin-left: 1rem;
+    }
+  }
+}
+.ReactCrop__image {
+  max-width: 100% !important;
+  //max-width: 70vw !important;
+  max-height: 70vh !important;
+}
+.hdn {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.printOnly {
+  display: none;
+}
+@media print {
+  #header,
+  .fakeHero,
+  .heroIllustration,
+  .reviews,
+  .smallMap,
+  .tagFilter,
+  .button.submit,
+  .registrationPromo,
+  .footerInner .left,
+  .footerInner .right form,
+  .vetListing .menu,
+  .loadMore {
+    display: none !important;
+  }
+  .unranked {
+    opacity: 0;
+  }
+  .printOnly {
+    display: inline-block;
+    margin-bottom: 2rem;
+  }
+  .react-photo-gallery--gallery img {
+    max-width: 48% !important;
+  }
+  .flex {
+    display: flex !important;
+    justify-content: space-between !important;
+    .flexItem {
+      width: 48% !important;
+      &.kontakt {
+        p:first-child {
+          margin-top: 0 !important;
+        }
+      }
+    }
+  }
+  .footer {
+    padding: 0 !important;
+  }
+  .vetMetas {
+    justify-content: flex-start !important;
+    .vetMeta {
+      width: 48% !important;
+      margin-right: 2% !important;
+    }
+  }
+  .vetMeta {
+    page-break-inside: avoid; /* or 'auto' */
+  }
+  .total {
+    padding-bottom: 2rem;
+  }
+  .vetListing .vetMetas .vetMeta .imageWrap .image img {
+    display: block;
+    width: 100%;
+    height: 10rem;
+    page-break-before: auto; /* 'always,' 'avoid,' 'left,' 'inherit,' or 'right' */
+    page-break-after: auto;
+    page-break-inside: avoid;
+  }
+  /*h1,
+    .vetsDetail,
+    .vetHeader {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }*/
+}

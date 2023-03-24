@@ -1,0 +1,69 @@
+.vetThumbnailCard {
+    width: calc(100vw - 2rem);
+    max-width: 18rem;
+
+    .vetThumbnailCardInner {
+        overflow: hidden;
+        border-radius: 5px;
+
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+
+        .profileImg {
+            width: 100%;
+            height: 65%;
+            object-fit: cover;
+        }
+
+        .thumbnailInfo {
+            padding: 0.4rem 1rem 0.7rem;
+
+            p {
+                margin: 0;
+                width: 100%;
+                clear: both;
+                overflow: hidden;
+                text-overflow: ellipsis;
+
+                &:first-child {
+                    span:first-child {
+                        max-width: 70%;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
+
+                    span:nth-child(2) {
+                        float: right;
+                        max-width: 30%;
+                        overflow: hidden;
+                    }
+                }
+
+                &:nth-child(2),
+                &:nth-child(3) {
+                    font-size: 0.8rem;
+                }
+
+                &:nth-child(2) span:first-child {
+                    margin-right: 1rem;
+                }
+
+                &:nth-child(3) span:first-child {
+                    &.opened {
+                        color: $color-dark-green;
+                    }
+
+                    &.closed {
+                        color: $color-carnation;
+                    }
+
+                    &::after {
+                        content: "•";
+                        margin: 0 0.4rem;
+                        color: $color-black;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,240 @@
+.recordModal {
+  box-sizing: content-box;
+  height: auto;
+  overflow-y: auto;
+  .modalInner {
+    h3 {
+      align-self: flex-start;
+      color: white;
+      padding-left: 2rem;
+    }
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .fileLabel {
+      width: 10rem;
+      border-right: 2px solid grey;
+      height: 50%;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: none;
+      h3 {
+        text-align: left;
+        //margin-left: 1.5rem;
+        color: white;
+      }
+      .error {
+        h3 {
+          color: $color-valencia;
+        }
+      }
+      input {
+        border-radius: 42px;
+        margin: 0.5rem 0 1.5rem 0;
+        padding: 1rem;
+      }
+      .react-datepicker-popper {
+        z-index: 3;
+      }
+      .firstRow {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        @include sm {
+          align-items: flex-end;
+          flex-direction: row;
+          height: 8rem;
+        }
+        .description {
+          text-align: left;
+          width: 100%;
+          @include sm {
+            width: 65%;
+            //padding-right: 15px;
+          }
+        }
+        .date {
+          text-align: left;
+          width: 100%;
+          @include sm {
+            width: 30%;
+          }
+        }
+      }
+      .doctor {
+        width: 100%;
+        margin: 0.5rem 0 1.5rem 0;
+        background-color: white;
+        border-radius: 42px;
+        h3 {
+          margin-top: 1rem;
+          color: black;
+        }
+        .doctors {
+          display: flex;
+          justify-content: flex-start;
+          flex-wrap: wrap;
+          margin: 1rem;
+          h3 {
+            margin-left: 1.5rem;
+          }
+          .vetMeta {
+            text-align: left;
+            transition: all 0.1s ease-in-out;
+            opacity: 0.4;
+            h3 {
+              padding-left: 0;
+              margin-left: 0;
+            }
+            p {
+              flex-direction: column;
+            }
+          }
+          .selected {
+            transition: all 0.1s ease-in-out;
+            opacity: 1;
+            border-radius: 23px;
+          }
+          .selected:hover {
+            transition: all 0.1s ease-in-out;
+            opacity: 0.9;
+          }
+          .findVet {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 10rem;
+            margin-bottom: 2rem;
+            width: 100%;
+            img {
+              opacity: 0.7;
+              transition: all 0.1s ease-in-out;
+              &:hover {
+                transition: all 0.1s ease-in-out;
+                opacity: 1;
+              }
+            }
+            @include sm {
+              width: 48%;
+              margin: 0 1%;
+            }
+            @include lg {
+              margin: 0 1.16%;
+              width: 31%;
+            }
+            p {
+              margin-top: 15px;
+              display: initial;
+              cursor: pointer;
+            }
+            img {
+              cursor: pointer;
+              justify-content: center;
+              width: 60px;
+              height: 60px;
+            }
+          }
+        }
+        .search {
+          .button {
+            margin-bottom: 1rem;
+          }
+        }
+      }
+      .fileRow {
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+        background-color: white;
+        border-radius: 42px;
+        margin: 0.5rem 0;
+        padding: 0.25rem 0;
+        align-items: center;
+        position: relative;
+        .input-file {
+          @include md {
+            display: flex;
+            flex-grow: 1;
+            align-items: center;
+          }
+          .text {
+            margin: 0;
+            padding: 0.5rem 2rem 0.5rem 0.5rem;
+            width: 100%;
+          }
+        }
+        .fileLabel {
+          @include smx {
+            display: none;
+          }
+          text-align: left;
+          margin-right: 0.5rem;
+          padding-left: 2rem;
+          white-space: nowrap;
+        }
+        img {
+          height: 24px;
+        }
+        .remove {
+          position: absolute;
+          right: 1rem;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .upload {
+      flex-direction: row;
+      text-align: left;
+      position: relative;
+      width: auto;
+      margin: 0.5rem 0;
+      padding: 0.65rem 0;
+      //width: 100%;
+      /* Aligning the div at the center of the webpage horizontally and providing some space from top of webpage */
+      background-color: white;
+      cursor: pointer;
+      /* Converting pointed corners of div to slightly rounded */
+      border-radius: 42px;
+      /* Hide that part of input type file element that is overflowed out of container div */
+      overflow: hidden;
+      font-size: 1rem;
+      .fileLabel {
+        @include smx {
+          display: none;
+        }
+        margin-right: 1rem;
+        padding-left: 2rem;
+        cursor: pointer;
+        white-space: nowrap;
+      }
+      input[type="file"] {
+        cursor: pointer;
+        margin: 0;
+        padding: 0;
+        /* Apply absolute positioning and move to top-left corner of parent div element */
+        position: absolute;
+        top: 0px;
+        left: 0;
+        /* Making the file input element to cover the whole div element */
+        right: 0px;
+        bottom: 0px;
+        width: 100%;
+        /* Hiding the tap color when it is clicked on touch devices ( this is not widely supported ) */
+        -webkit-tap-highlight-color: transparent;
+        /* Make it invisible ( it is present at it's position but just invisible ) */
+        opacity: 0;
+        /* Move it to the upper layer above the container div's layer to ensure that it is always clickable */
+        z-index: 1;
+      }
+    }
+  }
+}

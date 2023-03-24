@@ -1,0 +1,80 @@
+.petTerms {
+  margin-bottom: 1rem;
+  overflow: hidden;
+  background-color: #ffffff;
+  border-radius: 21px;
+  box-shadow: 1px 1px rgba(0, 0, 0, 0.16);
+  width: 100%;
+  .petTermsInner {
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.16);
+    padding: 1rem 1rem 0.5rem;
+    @media (min-width: 1060px) {
+      padding: 16px 16px 8px;
+    }
+    h3 {
+      margin-bottom: 15px;
+    }
+
+    .petTermList {
+      margin-bottom: 1rem;
+      width: 100%;
+      font-family: "WeissenhofGrotesk", sans-serif;
+      font-size: 0.8rem;
+      line-height: 1.3rem;
+      @media (min-width: 1060px) {
+        font-size: 14px;
+        line-height: 22px;
+      }
+      .term {
+        display: flex;
+      }
+      .termIsClose {
+        display: flex;
+        font-family: $font-bold;
+        color: #ce6668;
+      }
+
+      .name {
+        vertical-align: middle;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        flex: 2;
+        //width: 25%;
+      }
+
+      .date,
+      .interval {
+        flex: 1;
+        vertical-align: baseline;
+        text-align: right;
+      }
+    }
+
+    .actions {
+      width: 100%;
+
+      .flexContainer {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        margin-top: 0.5rem;
+        a {
+          display: flex;
+          align-items: flex-start;
+          margin-bottom: 5px;
+
+          .imageButton {
+            background-color: #dddd;
+            &:hover {
+              background-color: #bbbb;
+            }
+          }
+
+          &:not(:last-child) {
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.icon {
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  &.search {
+    width: 24px;
+    height: 24px;
+    background-image: url("./images/search.svg");
+  }
+  &.social {
+    width: 36px;
+    height: 36px;
+  }
+  &.facebook {
+    background-image: url("./images/fb.svg");
+    &:hover {
+      background-image: url("./images/fb_mouseover.svg");
+    }
+  }
+  &.instagram {
+    background-image: url("./images/ig.svg");
+    &:hover {
+      background-image: url("./images/ig_mouseover.svg");
+    }
+  }
+  &.slider {
+    background-image: url("./images/posuvniky.svg");
+    background-size: 30px 30px;
+  }
+  &.navigation {
+    background-image: url("./images/map-marker-alt-duotone.svg");
+    background-size: 29px 28px;
+  }
+
+  &.close {
+    width: 30px;
+    height: 30px;
+    background-image: url("./images/close.svg");
+  }
+}

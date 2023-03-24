@@ -1,0 +1,77 @@
+.petIcon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  //position: relative;
+  z-index: 1;
+  width: 33%;
+  @include md {
+    width: 54%;
+  }
+  align-items: center;
+
+  &.light {
+    .petName {
+      color: white;
+    }
+  }
+
+  .petName {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 10px 0 0;
+  }
+
+  .listAvatar {
+    background: #ce6668;
+    border: 0.5rem solid #ce6668;
+    border-radius: 100%;
+    box-sizing: border-box;
+    width: 180px;
+    min-width: 180px;
+    height: 180px;
+    max-height: 180px;
+    min-height: 180px;
+    @include md {
+    }
+    @media (min-width: 1060px) {
+      border: 8px solid #ce6668;
+    }
+  }
+  .avatar {
+    box-sizing: content-box;
+    background: #ce6668;
+    width: 100%;
+    border-radius: 100%;
+    border: 0.5rem solid;
+    border-color: #ce6668;
+  }
+  .editSign {
+    padding: 5px;
+    border: 1px solid #ce6668;
+    border-radius: 100%;
+    background-color: #ce9292;
+    &:hover {
+      background-color: rgba(207, 147, 147, 0.75);
+    }
+    position: absolute;
+    right: 0%;
+    bottom: 15%;
+    @include sm {
+      right: 5%;
+    }
+    transition: all 0.2s ease-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    img {
+      width: 16px;
+      padding: 1px;
+    }
+  }
+}

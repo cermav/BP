@@ -1,0 +1,118 @@
+.profile {
+  /*     .fakeHero,
+    .header .userMenu ul,
+    #menu,
+    .footer,
+    .footer form input[type="email"],
+    .header.sticky {
+        background: $color-neptune;
+    }
+    .footer form input[type="submit"] {
+        color: $color-neptune;
+    } */
+  main {
+    flex: 1;
+  }
+  .mainContainer {
+    .text-document,
+    .profileWrapper {
+      margin: 4rem 0;
+      min-height: 30vw;
+      min-height: calc(100vh - 450px);
+      clear: both;
+
+      .loggedIn {
+        width: 100%;
+        margin-bottom: 2rem;
+        @include md {
+          width: 50%;
+          gap: 0.5rem;
+        }
+        button {
+          padding: 0.5rem;
+        }
+      }
+    }
+  }
+  .profilePicture {
+    background-size: cover;
+  }
+}
+.loginButtons {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  button,
+  .button {
+    color: white;
+    margin: 0.5rem 0;
+    border: 1px solid white;
+    line-height: 1rem;
+    border-radius: 36px;
+    padding: 1rem;
+    text-align: center;
+    transition: 0.2s ease-in-out;
+    text-decoration: none;
+    &:hover {
+      opacity: 0.8;
+      transition: 0.2s ease-in-out;
+    }
+  }
+  #facebook {
+    background-color: $color-facebook-blue;
+  }
+  #google {
+    background-color: $color-google-red;
+  }
+  #mail {
+    background-color: $color-blue;
+  }
+  #apple {
+    background-color: $color-apple-black;
+  }
+}
+.new {
+  .text-document {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    @include sm {
+      width: 75%;
+    }
+    @include md {
+      width: 50%;
+    }
+    form {
+      width: 100%;
+    }
+  }
+}
+
+.profileGalleryContainer {
+  margin-top: 20px;
+}
+
+.profileGallery {
+  margin-top: 20px;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  .profileGallery__figure {
+    flex: 0 0 calc(33.33% - 20px);
+    margin: 0 0 20px 20px;
+
+    &:nth-child(3n + 1) {
+      margin-left: 0;
+    }
+  }
+
+  .profileGallery__img {
+    width: 100%;
+    height: auto;
+
+    display: block;
+    cursor: pointer;
+  }
+}

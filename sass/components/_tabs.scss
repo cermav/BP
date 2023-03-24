@@ -1,0 +1,48 @@
+.tabs{
+    display:flex;
+    padding: 1rem 0 0;
+    margin:0 0 1rem;
+    border-bottom: 1px solid $color-grey;
+    @include mdx{
+        flex-wrap: wrap;
+        border-bottom:0;
+    }
+    .tab{
+        display: flex;
+        padding:0;
+        margin:0;
+        vertical-align: bottom;
+        flex-wrap: wrap;
+        @include mdx{
+            width: 100%;
+        }
+        .tabButton{
+            margin-bottom: -1px;
+            padding:0.8rem 1.2rem;
+            background:$color-white;
+            color:$color-dark-grey;
+            border-bottom: 1px solid $color-grey;
+            border-top-right-radius: 3px;
+            border-top-left-radius: 3px;
+            transition: all 0.3s ease-in-out;
+            @include mdx{
+                padding:0rem 0rem;
+                border-bottom:0;
+            }
+    
+            &.active{
+//                background:$color-blue;
+                color:$color-blue;
+                border-color: $color-blue;
+                &:hover{
+                    color:$color-blue;
+                    border-color: $color-blue;
+                }
+            }
+            &:hover{
+                color:$color-black;
+                border-color: $color-black;
+            }
+        }
+    }
+}

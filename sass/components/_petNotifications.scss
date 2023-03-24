@@ -1,0 +1,96 @@
+.petNotifications {
+  border-radius: 21px;
+  //box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.75);
+  .petNotificationsInner {
+    border-radius: 21px;
+    padding: 1rem 1rem 0.5rem;
+    @media (min-width: 1060px) {
+      padding: 16px 16px 8px;
+    }
+    // TODO: Add dynamic color
+    background-color: #ce6668;
+
+    h3 {
+      .imageButton {
+        .text {
+          font-size: 1.17em;
+        }
+        img {
+          height: 1.5em;
+        }
+      }
+      color: $color-white;
+      font-family: $font-bold;
+      margin-bottom: 15px;
+    }
+
+    .petNotificationList {
+      margin-bottom: 15px;
+      width: 100%;
+      color: $color-white;
+      font-size: 0.8rem;
+      line-height: 1.3rem;
+      font-family: $font-bold;
+      @media (min-width: 1060px) {
+        font-size: 14px;
+        line-height: 22px;
+      }
+      tr {
+        display: flex;
+      }
+      td {
+        display: flex;
+        align-items: flex-start;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 5px;
+      }
+
+      .name {
+        margin-top: 0.25rem;
+        flex: 2;
+      }
+      .interval {
+        margin-top: 0.25rem;
+        text-align: right;
+        justify-content: flex-end;
+        flex: 1;
+      }
+      .icons {
+        flex: 1;
+        .icon {
+          transition: 0.2s ease-in-out;
+          width: 1.1rem;
+          cursor: pointer;
+          margin: 0.25rem;
+          border-radius: 100%;
+        }
+        .icon:hover {
+          transition: 0.2s ease-in-out;
+          background-color: rgb(206, 146, 146, 0.75);
+        }
+      }
+    }
+
+    .actions {
+      width: 100%;
+
+      .flexContainer {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+
+        button {
+          margin: 5px;
+        }
+        .imageButton {
+          background-color: #ce9292;
+          &:hover {
+            background-color: rgba(207, 147, 147, 0.5);
+          }
+        }
+      }
+    }
+  }
+}

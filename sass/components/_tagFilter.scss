@@ -1,0 +1,24 @@
+.tagFilter {
+    text-align: center;
+    .tags {
+        margin: 0 auto 1rem;
+        display: flex;
+        justify-content: center;
+        .moreTags {
+            cursor: pointer;
+            line-height: 38px;
+            padding: 0 0.5rem;
+            display: inline-block;
+            color: $color-blue;
+        }
+        .hidden {
+            display: none;
+        }
+    }
+    p {
+        text-align: center;
+        .button {
+            float: none;
+        }
+    }
+}

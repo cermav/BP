@@ -1,0 +1,40 @@
+.home {
+  .page {
+  }
+  .hero {
+    min-height: 50rem;
+    background-image: url("./images/mysak_pozadi.png");
+    .heroIllustration {
+      background-image: url("./images/mysak_motiv.png");
+      @include lg {
+        max-width: 45rem;
+      }
+    }
+  }
+  .blocks {
+    padding: 1rem 0 2rem;
+    @include md {
+      padding: 2rem 0 3rem;
+    }
+  }
+}
+.appStores {
+  margin: 3rem 0 2rem;
+  display: flex;
+  align-content: space-around;
+  a {
+    z-index: 10;
+  }
+  @include sm {
+    display: block;
+  }
+  img {
+    margin: 0 0.5rem 0.5rem 0;
+    width: 8rem;
+    height: 2.647rem;
+    @include sm {
+      width: 9rem;
+      height: 2.978rem;
+    }
+  }
+}

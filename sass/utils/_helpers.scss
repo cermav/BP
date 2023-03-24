@@ -1,0 +1,47 @@
+.circle {
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-radius: 100%;
+}
+
+.white {
+  color: $color-white;
+}
+.english {
+  display: inline-block;
+  background-color: $color-carnation;
+  padding: 0.1rem 0.2rem;
+  color: $color-white;
+  margin-top: 0.3rem;
+}
+
+.greenBg {
+  background-color: $color-green;
+}
+.greenFont {
+  color: #57aa00;
+}
+.redBg {
+  background-color: $color-carnation;
+}
+.error {
+  color: $color-valencia;
+}
+
+.fsSmall {
+  font-size: 0.9rem;
+  line-height: 1.1rem;
+}
+
+.lowerCase {
+  text-transform: lowercase;
+}
+
+.dot {
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 50%;
+  margin: 0 0 0.1rem 0.1rem;
+  display: inline-block;
+}

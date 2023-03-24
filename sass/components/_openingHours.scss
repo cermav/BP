@@ -1,0 +1,38 @@
+#ohForm{
+    margin:2rem 1rem;
+    @include mdx{
+        margin:2rem 0rem;
+    }    
+    .weekday{vertical-align: middle;min-width:5rem;line-height: 2.5em;}
+    .weekday2{vertical-align: middle;min-width:1rem;line-height: 2.5em;text-align: center;margin-right:1rem;
+        @include mdx{display:none}
+    }
+    .formLabel, .formInput, .formSelect{width:auto;min-width:10rem;margin-right:1rem;}
+    .formInput{min-width: 6rem;}
+    select.formSelect{padding:0.5rem 1rem;min-width: 8rem;}
+    .formRow{
+        flex-wrap:nowrap;
+        .formRow{margin:0;}
+        @include mdx{
+            display:block;
+            .formLabel, .formInput, .formSelect{width:48%;margin:0.2rem 0rem;}
+            .formInput{width:48%;margin:0.2rem 0.2rem 0.2rem 0;float:left;}
+            .button{margin:0.2rem 0rem;}
+        }    
+    }
+    .formSubmit{margin-top: 1rem;}
+}
+
+#specForm{
+    margin:2rem 0rem;
+    h2{margin-bottom: 1rem;}
+    .formInput{margin: 1rem 0rem;width:auto;min-width:10rem;}
+}
+#priceForm{
+    margin:2rem 0rem;
+    .formLabel, .formInput, .formSelect{width:auto;min-width:6rem;margin-right:1rem;}
+    .formLabel{vertical-align: middle;min-width:1rem;line-height: 2.5em;}
+    .formInput{margin: 0rem 0rem 0.5rem;width:auto;width:5rem;min-width:5rem;margin-right:1rem;}
+    h3{margin-top: 2rem;margin-bottom:1rem}
+    #name{width:20rem}
+}

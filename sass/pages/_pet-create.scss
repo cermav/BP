@@ -1,0 +1,244 @@
+.petCreate {
+  .pageMain {
+    main {
+      background-image: url("/images/pets-pes_create.png");
+      background-repeat: no-repeat;
+      background-position-y: bottom;
+      background-position-x: 50%;
+      background-size: 50rem;
+      padding-bottom: 10vh;
+      flex: 1;
+      background-color: #ce6668;
+      color: white;
+      @include sm {
+        background-size: 75rem;
+        background-position-y: bottom;
+        background-position-x: right;
+      }
+      @media (min-width: 1060px) {
+      }
+      .close {
+        position: absolute;
+        top: -1px;
+      }
+      .top {
+        .pageCount {
+          text-align: center;
+          margin: 1.5rem 0 1.5rem;
+          @include sm {
+            text-align: right;
+            margin: 2rem 0 -2.5rem;
+          }
+          font-size: 1.5rem;
+          border: 0px;
+          background-color: #ce6668;
+        }
+        padding-bottom: 1rem;
+        border-bottom: white 1px solid;
+        .petStatus {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          padding: 0 0.5rem;
+          @include sm {
+            padding: 0 2rem;
+          }
+
+          span {
+            cursor: pointer;
+            background-color: #4ba7ff;
+            border: solid 2px white;
+            border-radius: 42px;
+            margin: 0.25rem;
+            padding: 0.25rem 0.75rem;
+            @include md {
+              margin: 0.5rem;
+              padding: 0.5rem 1rem;
+            }
+          }
+          .placeHolder {
+            &:last-child {
+              height: 2.5rem;
+            }
+            background-color: #ce6668;
+            border: none;
+            width: 0rem;
+            max-width: 0rem;
+            margin: 0.5rem 0rem;
+          }
+        }
+      }
+      .content,
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2rem;
+        @include sm {
+          min-height: 18rem;
+        }
+        .letters,
+        .breeds {
+          margin: 1rem 0rem;
+        }
+        input,
+        .react-datepicker-wrapper {
+          input {
+            width: 100%;
+            padding: 0;
+          }
+          width: 15rem;
+          letter-spacing: 0.2rem;
+          text-align: center;
+          padding: 0.5rem 1rem;
+          border-radius: 42px;
+          background-color: white;
+          color: black;
+        }
+        h1 {
+          text-align: center;
+          font-size: 2.6rem;
+          margin-top: 2rem;
+        }
+        p {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 2rem;
+        }
+        .kinds {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          margin-top: 2rem;
+        }
+        span {
+          margin: 0.5rem;
+          padding: 0.5rem 1rem;
+          font-family: "Roboto", sans-serif;
+          border: 2px solid white;
+          border-radius: 42px;
+          cursor: pointer;
+        }
+        .unchecked:hover {
+          transition: 0.4s;
+          background-color: rgba(white, 0.2);
+        }
+        .errorDiv {
+          margin: 0.5rem;
+          padding: 0.5rem 1rem;
+          font-family: "Roboto", sans-serif;
+          border: 2px solid white;
+          border-radius: 42px;
+        }
+        img {
+          height: 2rem;
+          width: 2rem;
+        }
+        .checked {
+          background-color: white;
+          color: black;
+        }
+        .letters {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          text-align: center;
+          margin-top: 2rem;
+          .letterUnchecked {
+            border: 0px;
+            margin: 1px;
+          }
+          .letterUnchecked:hover {
+            transition: 0.4s;
+            background-color: rgba(white, 0.2);
+          }
+          .letterChecked {
+            background-color: white;
+            color: black;
+            margin: 1px;
+          }
+        }
+        .breeds {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          .breed {
+            font-size: 0.75rem;
+            margin: 0.25em;
+          }
+          .breedCheck {
+            font-size: 0.75rem;
+            margin: 0.25em;
+            background-color: white;
+            color: black;
+          }
+        }
+        .textInput {
+          border: none;
+          background: none;
+          font-family: "Roboto-bold", sans-serif;
+          //font-family: "WeissenhofGrotesk-bold", sans-serif;
+          //font-weight: bold;
+          font-size: 2rem;
+        }
+      }
+      form {
+        margin-bottom: 0rem;
+      }
+      .bottom {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        border-top: white solid 1px;
+        .progressBar {
+          padding: 0.1rem;
+          margin: 1rem;
+          display: flex;
+
+          .checked {
+            cursor: pointer;
+            width: 2rem;
+            height: 0.4rem;
+            margin: 0.1rem;
+            background-color: #d8d8d8;
+            border: 2px solid white;
+            border-radius: 20px;
+          }
+          .unchecked {
+            width: 2rem;
+            height: 0.4rem;
+            margin: 0.1rem;
+            border: 2px solid white;
+            border-radius: 20px;
+          }
+        }
+        p {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          @media (min-width: 292px) {
+            flex-direction: row;
+            justify-content: space-around;
+          }
+          .button {
+            margin: 0.5rem;
+            border-radius: 42px;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            border: 2px solid white;
+            background: none;
+            @include sm {
+              margin: 1rem;
+            }
+          }
+          .button:hover {
+            transition: 0.4s;
+            background-color: rgba(white, 0.2);
+          }
+        }
+      }
+    }
+  }
+}

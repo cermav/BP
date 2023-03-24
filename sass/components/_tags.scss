@@ -1,0 +1,44 @@
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  .tag {
+    margin: 3px 5px 3px 0;
+    padding: 4px 11px;
+    background-color: #e8e8e8;
+    filter: drop-shadow(2px 2px 2px #eee);
+    // border: 1px solid $color-black;
+    border-radius: 20px;
+    font-size: 14px;
+    line-height: 26px;
+    cursor: pointer;
+    &.nonClickable {
+      cursor: default;
+      border: 1px solid $color-snowhite;
+      background-color: $color-snowhite;
+      color: $color-dark-grey;
+    }
+    &.active {
+      border-color: $color-blue-hover;
+      color: white;
+      background-color: #4ea7ff;
+      display: inline-block !important;
+    }
+    &.active:hover {
+      background-color: #4ea7ff;
+      display: inline-block !important;
+    }
+    .big {
+      cursor: pointer;
+      background-color: #4ea7ff;
+    }
+  }
+  .tag:hover {
+    background-color: #bebebe;
+  }
+  .tag:active {
+    background-color: #4ea7ff;
+  }
+}
+.consulting .tags .tag {
+  background-color: #d8d8d8;
+}

@@ -1,0 +1,16 @@
+.loader {
+  margin-left:auto;
+  margin-right:auto;
+  border: 16px solid $color-spindle;
+  border-top: 16px solid $color-blue;
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  animation: spin 2s linear infinite;
+  margin-bottom:5rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

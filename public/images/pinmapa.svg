@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 23.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Vrstva_1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 24.095976 36.143963"
+   xml:space="preserve"
+   sodipodi:docname="pinmapa.svg"
+   width="24.095976"
+   height="36.143963"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"><metadata
+   id="metadata20"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+   id="defs18" /><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="3677"
+   inkscape:window-height="2131"
+   id="namedview16"
+   showgrid="false"
+   inkscape:zoom="30.046512"
+   inkscape:cx="12.047985"
+   inkscape:cy="19.40426"
+   inkscape:window-x="2074"
+   inkscape:window-y="-9"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="Vrstva_1" />
+<style
+   type="text/css"
+   id="style10">
+	.st0{fill:#4EA7FF;}
+	.st1{fill:#FFFFFF;}
+</style>
+<g
+   id="Group_651"
+   transform="matrix(0.37254903,0,0,0.37254903,-73.07946,-584.29135)"
+   style="stroke-width:2.68421054">
+	<path
+   id="Path_328"
+   class="st0"
+   d="m 250,1606.12 c 0,11.87 -21.5,43 -21.5,43 0,0 -21.5,-31.13 -21.5,-43 0,-11.87 9.63,-21.5 21.5,-21.5 v 0 c 11.87,0 21.5,9.62 21.5,21.5 z"
+   inkscape:connector-curvature="0"
+   style="fill:#4ea7ff;stroke-width:2.68421054" />
+	<circle
+   id="Ellipse_148"
+   class="st1"
+   cx="228.60001"
+   cy="1606.25"
+   r="14.33"
+   style="fill:#ffffff;stroke-width:2.68421054" />
+</g>
+</svg>

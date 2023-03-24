@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="51px" height="51px" viewBox="0 0 51 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>rss</title>
+    <defs>
+        <filter x="-6.3%" y="-11.7%" width="112.7%" height="123.3%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Web" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Aplikace---Home" transform="translate(-881.000000, -2933.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="Group" filter="url(#filter-1)" transform="translate(859.000000, 2905.000000)">
+                <g id="rss-light" transform="translate(26.000000, 30.000000)">
+                    <path d="M7.67856266,30.7142736 C10.2189191,30.7142736 12.2857002,32.7810592 12.2857002,35.321421 C12.2857002,37.8617829 10.2189191,39.9285684 7.67856266,39.9285684 C5.13820618,39.9285684 3.07142506,37.8617829 3.07142506,35.321421 C3.07142506,32.7810592 5.13820618,30.7142736 7.67856266,30.7142736 M7.67856266,27.6428421 C3.43778848,27.6428421 0,31.0806378 0,35.321421 C0,39.5622042 3.43778848,43 7.67856266,43 C11.9193368,43 15.3571253,39.5622042 15.3571253,35.321421 C15.3571253,31.0806378 11.9193368,27.6428421 7.67856266,27.6428421 Z M42.9995669,41.81126 C42.3806748,18.9820768 23.9893654,0.619139156 1.18883346,0.000437655088 C0.538363224,-0.0172230766 0,0.501848862 0,1.15241647 L0,1.92085026 C0,2.54300712 0.493923543,3.05497637 1.11588712,3.07206121 C22.3096799,3.65275374 39.3473546,20.7244424 39.9278539,41.8841105 C39.9449387,42.5060754 40.4569069,43 41.0790624,43 L41.8475906,43 C42.4981568,43 43.0171317,42.4616356 42.9995669,41.81126 Z M29.1546386,41.8064609 C28.5454406,26.6285978 16.3691599,14.4544028 1.19353658,13.8452995 C0.541626613,13.8190963 0,14.3445031 0,14.9968944 L0,15.7652322 C0,16.3851814 0.490852118,16.890144 1.11022418,16.9159632 C14.6565525,17.4813946 25.5185512,28.345432 26.0839814,41.8897735 C26.1098005,42.5091468 26.614858,43 27.23471,43 L28.0030461,43 C28.655532,43 29.1808417,42.4583722 29.1546386,41.8064609 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

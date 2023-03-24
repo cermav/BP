@@ -1,0 +1,113 @@
+.header {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  padding: 1rem 0;
+  @include sm {
+    padding: 1.5rem 0;
+  }
+  @include md {
+    padding: 2rem 0;
+  }
+
+  background: transparent;
+  color: $color-white;
+  z-index: 100000;
+  transition: background-color 0.15s ease-in-out;
+  &.sticky {
+    background-color: $color-blue;
+    transition: background-color 0.3s ease-in-out;
+  }
+  .logo {
+    display: block;
+    overflow: hidden;
+    width: 8rem;
+    height: 1.8rem;
+    background: url("./images/logo.svg") no-repeat center / contain;
+  }
+  .headerInner {
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    .left {
+      display: flex;
+      align-items: baseline;
+    }
+    #menu > li {
+      @include md {
+        height: 26px !important;
+      }
+      a.button {
+        background: $color-white;
+        color: $color-blue;
+        display: inline-block;
+        position: relative;
+        padding: 0.5rem 0.8rem 0.3rem;
+        &:after {
+          display: none;
+        }
+        margin-bottom: 1rem;
+
+        @include md {
+          margin: -0.4rem 0;
+        }
+      }
+    }
+  }
+  .headerLogo {
+    margin-right: 2rem;
+    text-indent: 999rem;
+    overflow: hidden;
+  }
+  .userMenu {
+    .userName a {
+      color: $color-alto;
+      display: inline-block;
+      background-image: url("./images/user.png");
+      line-height: 999rem;
+      overflow: hidden;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 2rem;
+      width: 2rem;
+      margin-top: -0.5rem;
+      margin-bottom: -0.32rem;
+    }
+    .userName.isAdmin a {
+      background-image: url("./images/user-admin.png");
+    }
+    .avatar {
+      border-radius: 50px;
+      border: 1px solid white;
+      background-size: cover !important;
+    }
+    ul {
+      //      border:1px solid red;
+      display: none;
+      position: absolute;
+      margin-top: -3px;
+      margin-left: -1rem;
+      padding: 0.5rem 0 1rem;
+      width: 12rem;
+      background: $color-blue;
+      li {
+        a,
+        button {
+          display: inline-block;
+          padding: 0.5rem 0;
+          &:after {
+            display: none !important;
+          }
+        }
+      }
+    }
+    &:hover {
+      ul {
+        display: block;
+      }
+    }
+  }
+}

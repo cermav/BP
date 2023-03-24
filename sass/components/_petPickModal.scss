@@ -1,0 +1,70 @@
+.petPickModal {
+  width: 100vw;
+  max-width: none !important;
+  height: auto;
+  overflow-y: auto;
+  color: white;
+  .modalInner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    .petList {
+      margin: 1rem 0;
+      .flexContainer {
+        padding-bottom: 10rem;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        margin: 0 -15px;
+        a {
+          margin: 15px;
+          .petIcon img {
+            border-width: 8px;
+            transition: 0.1s ease-in-out;
+          }
+          &:hover .petIcon img {
+            transition: 0.1s ease-in-out;
+            border-width: 2px;
+          }
+          .petIcon,
+          &.addPet {
+            .petName {
+              color: white;
+            }
+            .imageContainer {
+              .avatar {
+                width: 180px;
+                height: 180px;
+              }
+            }
+            width: 180px;
+            height: 180px;
+          }
+        }
+
+        .addPet {
+          position: relative;
+          height: 0;
+          padding-top: 25%;
+
+          &:hover::after {
+            transform: translate(-50%, -50%) scale(1.1);
+          }
+
+          &::after {
+            font-size: 60px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            display: block;
+            content: "+";
+            transform: translate(-50%, -50%);
+            color: $color-grey;
+            transition: transform 0.1s ease-out;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,131 @@
+.new {
+  .text-document {
+    .formRow {
+      display: flex;
+      justify-content: center;
+      .formInput {
+        border-radius: 36px;
+        padding: 1rem;
+        text-align: center;
+      }
+      .button {
+        margin: 0.4rem;
+      }
+    }
+  }
+}
+.formRow {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0.5rem 0 1rem;
+  &.errorRow {
+    .formInput {
+      border-color: $color-valencia;
+    }
+  }
+  .errorMsg {
+    font-size: 0.8rem;
+    line-height: 1.4rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0rem !important;
+  }
+  &.jcsb {
+    justify-content: space-between;
+  }
+  &.gdpr {
+    justify-content: space-between;
+  }
+}
+
+.formLabel,
+.formInput,
+.formSelect {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+#vetEmail {
+  line-height: 1rem;
+}
+#vetPassword {
+  line-height: 1rem;
+}
+.formLabel {
+  margin-bottom: 7px;
+  color: $color-dark-grey;
+}
+
+.formCheckbox {
+  position: relative;
+  }
+
+.formInput {
+  padding: 5px 10px;
+  border: 1px solid $color-grey;
+  //order-radius: 5px;
+  border-radius: 36px;
+  &:read-only {
+    background: #f8f8f8;
+  }
+}
+textarea.formInput {
+  padding: 10px;
+}
+
+.formCheckboxRadioRow {
+  user-select: none;
+  padding-left: 40px;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+
+    &:checked ~ .checkmark {
+      border-color: $color-blue;
+      &:after {
+        display: block;
+      }
+    }
+  }
+
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: $color-white;
+    border: 1px solid $color-grey;
+    border-radius: 5px;
+
+    &:after {
+      content: "";
+      position: absolute;
+      display: none;
+      left: 9px;
+      top: 5px;
+      width: 5px;
+      height: 10px;
+      border: solid $color-blue;
+      border-width: 0 3px 3px 0;
+      transform: rotate(45deg);
+    }
+  }
+}
+
+.errorMsg {
+  position: relative;
+  float: left;
+  width: 100%;
+  color: $color-valencia;
+  margin: 0.5rem 0 2rem !important;
+}
+.forgottenPass {
+  float: right;
+  margin: 0.6rem;
+}

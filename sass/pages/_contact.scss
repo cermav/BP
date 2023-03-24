@@ -1,0 +1,46 @@
+.contact {
+    .page {
+        background-color: $color-neptune;
+    }
+    .hero {
+        background-color: $color-neptune;
+        .heroContent {
+            padding-bottom: 2rem;
+            p {
+                max-width: 100%;
+            }
+        }
+        .heroIllustration {
+            display: none;
+        }
+    }
+}
+
+.errorPage {
+    background-color: $color-neptune;
+    background-color: #81b9b9;
+    /*     background-image: url("./images/tygr_pozadi.png");
+    background-position: 100% 100%;
+    background-repeat: no-repeat; */
+    height: 100vh;
+    .page {
+        height: 100vh;
+        background-position: 50% 90%;
+        background-size: 50%;
+        background-repeat: no-repeat;
+        background-image: url("./images/tygr_motiv.png");
+        color: $color-white;
+    }
+    .logo {
+        display: inline-block;
+        overflow: hidden;
+        width: 8rem;
+        height: 1.8rem;
+        background: url("./images/logo.svg") no-repeat center / contain;
+    }
+    .headerLogo {
+        margin: 2rem;
+        text-indent: 999rem;
+        overflow: hidden;
+    }
+}
