@@ -1,0 +1,14 @@
+{
+  "./dev/noop": [
+    {
+      "id": "./node_modules/next/dist/client/dev/noop.js",
+      "file": "static/chunks/0.js"
+    }
+  ],
+  "react-facebook-pixel": [
+    {
+      "id": "./node_modules/react-facebook-pixel/dist/fb-pixel.js",
+      "file": "static/chunks/1.js"
+    }
+  ]
+}
