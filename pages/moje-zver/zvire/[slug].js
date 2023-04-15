@@ -66,9 +66,11 @@ const Pet = () => {
       });
       const isClient = typeof window === "object";
       const responseObject = await result.json();
-      if ((isClient && result.status == 200) || (result.status == 201 && window.localStorage)) {
+
+      if ((isClient && result.status === 200) || (result.status === 201 && window.localStorage)) {
         window.localStorage.setItem("last_pet", responseObject.id);
       }
+
       if (responseObject.id) {
         setPetObject(responseObject);
         if (isClient && window.localStorage)

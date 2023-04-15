@@ -64,7 +64,7 @@ const Appointments = () => {
         },
       });
       const responseObject = await result.json();
-      if (result.status == 401) return router.replace("../../../login");
+      if (result.status === 401) return router.replace("../../../login");
       setAppointments(responseObject);
     };
     fetchStates();
@@ -86,7 +86,7 @@ const Appointments = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const handleValid = (date, now) => {
+  const handleValid = (date) => {
     const oneDay = 24 * 60 * 60 * 1000;
     const date1 = new Date(date);
     const date2 = new Date(now);
@@ -99,14 +99,11 @@ const Appointments = () => {
     allVets && setVetsWithDistance(addDistances(allVets, userCoordinates));
   }, [vetsArray]);
 
+  const oneDay = 24 * 60 * 60 * 1000;
   const setName = (date, now) => {
     const date1 = new Date(date);
     const date2 = new Date(now);
-    const oneDay = 24 * 60 * 60 * 1000;
-    const day1 = date1 / oneDay;
-    const day2 = date2 / oneDay;
-    if (day1 - day2 > 30) return "row";
-    else return "rowClose";
+    return (date1 / oneDay - date2 / oneDay > 30) ? "row" : "rowClose";
   };
 
   return (
@@ -228,13 +225,13 @@ const Appointments = () => {
                     </div>
                     <div className="interval small" key={`interval1${index}`}>
                       <div className="label">Zbývá: </div>
-                      <div className="text">{handleValid(item.date, now)} dní</div>
+                      <div className="text">{handleValid(item.date)} dní</div>
                     </div>
                   </div>
                   <div className="second holder">
                     <div className="interval small" key={`interval2${index}`}>
                       <div className="label">Zbývá: </div>
-                      <div className="text">{handleValid(item.date, now)} dní</div>
+                      <div className="text">{handleValid(item.date)} dní</div>
                     </div>
                     <div className="date small" key={`date2${index}`}>
                       <div className="label">Datum: </div>
@@ -245,7 +242,7 @@ const Appointments = () => {
                     {formatTimestamp(item.date)}
                   </div>
                   <div className="interval" key={`interval3${index}`}>
-                    {handleValid(item.date, now)} dní
+                    {handleValid(item.date)} dní
                   </div>
 
                   <div className="doctor" key={`doctor2${index}`}>

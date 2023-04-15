@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { getAuthorizationHeader } from "../../services/AuthToken";
+import {getAuthorizationHeader, userRoles} from "../../services/AuthToken";
 import { useRouter } from "next/router";
 
 import FullCalendar from "@fullcalendar/react";
@@ -13,6 +13,7 @@ import UpdateEventOwnerModal from "../modal/calendar/UpdateEventOwnerModal";
 import CreateEventOwnerModal from "../modal/calendar/CreateEventOwnerModal";
 import CreateEventVetModal from "../modal/calendar/CreateEventVetModal";
 import UpdateEventVetModal from "../modal/calendar/UpdateEventVetModal";
+import {withUserRoute} from "../hoc/withUserRoute";
 
 const Calendar = () => {
   const initialView = "dayGridMonth";
@@ -55,7 +56,7 @@ const Calendar = () => {
       });
 
       const responseObject = await result.json();
-      if (result.status === 401) return router.replace("../../../login");
+
       setAppointments(responseObject);
     };
 
@@ -146,4 +147,4 @@ const Calendar = () => {
   );
 };
 
-export default Calendar;
+export default withUserRoute(Calendar);

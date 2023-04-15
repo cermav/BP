@@ -12,6 +12,7 @@ import ToggleModalContent from "../modal/ToggleModalContent";
 import UpdateEventOwnerModal from "../modal/calendar/UpdateEventOwnerModal";
 import CreateEventOwnerModal from "../modal/calendar/CreateEventOwnerModal";
 import ConfirmOrUpdateModal from "../modal/calendar/ConfirmOrUpdateModal";
+import {withUserRoute} from "../hoc/withUserRoute";
 
 const UserCalendar = (props) => {
   const initialView = "dayGridMonth";
@@ -39,11 +40,9 @@ const UserCalendar = (props) => {
       });
 
       const responseObject = await result.json();
-      if (result.status === 401) return router.replace("../../../login");
 
       setEventColors(responseObject);
 
-      console.log(responseObject);
       setAppointments(responseObject);
     };
     fetchData();
@@ -130,4 +129,4 @@ const UserCalendar = (props) => {
   );
 };
 
-export default UserCalendar;
+export default withUserRoute(UserCalendar);

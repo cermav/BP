@@ -2,19 +2,17 @@ import TransparentModal from "../TransparentModal";
 import React, { useState, useEffect } from "react";
 import { getAuthorizationHeader } from "../../../services/AuthToken";
 import { useForm } from "react-hook-form";
-import SafariDate from "../../../helpers/SafariDate";
-import Bowser from "bowser";
 import { withNotie } from "react-notie";
 import moment from "moment/moment";
 import VetSearch from "../../form/VetSearch";
 import router from "next/router";
 import PetListIcon from "../../myPets/pet/PetListIcon";
 import { prototype } from "react-image-crop";
+import getBrowser from "../../../helpers/bowser";
+import InputDate from "../../form/InputDate";
 
 const UpdateEventOwnerModal = (props) => {
   moment.locale("cs");
-
-  const browser = Bowser.getParser(window.navigator.userAgent);
 
   const initialStartTime =
     props?.event?.date === props?.event?.start ? null : moment(props?.event?.start)?.format("HH:mm");
@@ -145,18 +143,7 @@ const UpdateEventOwnerModal = (props) => {
           </div>
 
           <div className="date">
-            {browser.getBrowserName() === "Safari" ? (
-              <SafariDate error={errors.date} setDate={setDate} date={props?.dateObj?.dateStr} />
-            ) : (
-              <>
-                <input
-                  type="date"
-                  name="date"
-                  className={errors.date ? "modal-date error-input" : "modal-date"}
-                  defaultValue={date}
-                  onChange={(e) => setDate(e.target.value)}
-                  ref={register({ required: true })}
-                />
+            <InputDate date={date} setDate={setDate} name={"date"} register={register} errors={errors.date}/>
 
                 <h3>Začátek termínu</h3>
                 <div style={{ display: "flex" }}>
@@ -181,8 +168,6 @@ const UpdateEventOwnerModal = (props) => {
                 <div style={{ display: "flex" }}>
                   <VetSearch setVetId={setVetId} vetId={vetId} />
                 </div>
-              </>
-            )}
           </div>
 
           <div className="buttons">

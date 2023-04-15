@@ -72,7 +72,17 @@ const ControlEventVetModal = (props) => {
       body: JSON.stringify(record)
     });
 
-    await response();
+    const result = await response.json();
+
+    if (result.errors) {
+      props.notie.error(result.errors);
+      console.log("error: " + result.errors);
+    }
+    else {
+      props.notie.success(`Úspěšně vytvořeno!`);
+      props.close(Date.now());
+      props.hide();
+    }
   };
 
   const sendAcceptOrDenyRequest = async (decision) => {

@@ -11,6 +11,7 @@ import list from "@fullcalendar/list";
 import ToggleModalContent from "../modal/ToggleModalContent";
 import CreateEventVetModal from "../modal/calendar/CreateEventVetModal";
 import ControlEventVetModal from "../modal/calendar/ControlEventVetModal";
+import {withUserRoute} from "../hoc/withUserRoute";
 
 const DoctorCalendar = (props) => {
   const initialView = "dayGridMonth";
@@ -38,10 +39,8 @@ const DoctorCalendar = (props) => {
       });
 
       const responseObject = await result.json();
-      if (result.status === 401) return router.replace("../../../login");
 
       setEventColors(responseObject);
-
       setAppointments(responseObject);
     };
 
@@ -128,4 +127,4 @@ const DoctorCalendar = (props) => {
   );
 };
 
-export default DoctorCalendar;
+export default withUserRoute(DoctorCalendar);

@@ -105,7 +105,7 @@ const Vaccines = () => {
           },
         });
         const responseObject = await result.json();
-        if (result.status == 401) return router.replace("../../../login");
+
         const sortedVaccines = responseObject?.sort((a, b) => {
           var dateA = new Date(a.apply_date);
           var dateB = new Date(b.apply_date);
@@ -115,6 +115,7 @@ const Vaccines = () => {
           dateA > dateB ? (result = 1) : (result = -1);
           return result;
         });
+
         setVaccines(sortedVaccines);
       };
       const fetchVets = async () => {

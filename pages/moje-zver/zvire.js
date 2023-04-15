@@ -6,6 +6,8 @@ import { withUserRoute } from "../../components/hoc/withUserRoute";
 
 const Pet = () => {
   const router = useRouter();
+  const isClient = typeof window === "object";
+
   useEffect(() => {
     const fetchLastPetId = async () => {
       const response = await fetch(process.env.apiURL + "pets/latest", {
@@ -16,16 +18,15 @@ const Pet = () => {
         },
       });
       const responseObject = await response.json();
-      const isClient = typeof window === "object";
       if (isAuthorized() && isClient) {
         if (response.status === 200 && responseObject && responseObject !== 0) {
-          console.log(responseObject);
           router.push("/moje-zver/zvire/" + responseObject);
         } else router.push("/moje-zver/vytvorit");
       } else {
         isClient && router.push("/login");
       }
     };
+
     fetchLastPetId();
   }, []);
 

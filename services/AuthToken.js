@@ -96,7 +96,7 @@ export const getAvatar = (ctxToken = null) => {
 export const getUserId = (ctxToken = null) => {
     const token = ctxToken || getCookiesToken();
     const tokenData = getDecodedToken(token);
-    return tokenData ? tokenData.id : null;
+    return tokenData ? tokenData.sub : null;
 };
 export const getUserName = (ctxToken = null) => {
     const token = ctxToken || getCookiesToken();

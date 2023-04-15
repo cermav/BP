@@ -159,7 +159,7 @@ const Records = () => {
         return;
     }
   };
-  const download = (fileName, file_id) => {
+  /*const download = (fileName, file_id) => {
     const fetchFile = async (file_id) => {
       const image = await fetch(process.env.apiURL.slice(0, -4) + "get-file/" + file_id, {
         headers: {
@@ -180,7 +180,7 @@ const Records = () => {
     };
 
     fetchFile(file_id);
-  };
+  };*/
   useEffect(() => {
     const item = document?.getElementById(parseInt(router?.query?.id));
     const offset = item?.offsetTop;
@@ -196,7 +196,7 @@ const Records = () => {
       return process.env.storageUrl + "/pet_background/" + pet?.background;
     } else return "/images/elephant@2x.png";
   };
-  const handleSign = (fileName) => {
+  /*const handleSign = (fileName) => {
     const extension = fileName.slice(-6);
     if (extension.includes("pdf")) return "/icons/file-pdf-light.svg";
     if (extension.includes("jpg")) return "/icons/file-image-light.svg";
@@ -206,7 +206,7 @@ const Records = () => {
     if (extension.includes("txt")) return "/icons/file-word-light.svg";
     if (extension.includes("doc")) return "/icons/file-word-light.svg";
     if (extension.includes("docx")) return "/icons/file-word-light.svg";
-  };
+  };*/
   return (
     <Layout bodyClass="records" registrationPromo={false}>
       <div className="recordsContainer">

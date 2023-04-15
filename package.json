@@ -6,6 +6,7 @@
   "license": "ISC",
   "main": "index.js",
   "dependencies": {
+    "react": "^16.13.1",
     "@fullcalendar/core": "^6.0.1",
     "@fullcalendar/daygrid": "^6.0.1",
     "@fullcalendar/interaction": "^6.0.1",
@@ -38,7 +39,6 @@
     "node-fetch": "^2.6.0",
     "prop-types": "^15.7.2",
     "query-string": "^6.13.1",
-    "react": "^16.13.1",
     "react-datepicker": "^3.4.0",
     "react-dom": "^16.13.1",
     "react-facebook-login": "^4.1.1",

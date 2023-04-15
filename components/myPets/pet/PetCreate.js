@@ -59,6 +59,7 @@ const Create = () => {
     listAvailableLetters();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [kind, PetBreed]);
+
   let petObject = {
     pet_name: petName,
     birth_date: birthDate,

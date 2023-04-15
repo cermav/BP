@@ -80,7 +80,7 @@ const ExamRecord = (props) => {
                 width: "100%",
                 textAlign: "left",
                 margin: "1rem 0",
-                marginLeft: "2rem",
+                // marginLeft: "2rem",
             }}>{
                 props.event.start === props.event.date ?
                     <input type="time" onChange={(e) => setTime(e.target.value)}/> :
@@ -115,7 +115,7 @@ const ExamRecord = (props) => {
                     key="submitTerm"
                     className="submit"
                     type="submit"
-                    value="Změnit"
+                    value="Vytvořit"
                     id="submit"
                     //onClick={() => !date && (errors.date = "date required!")}
                 ></input>

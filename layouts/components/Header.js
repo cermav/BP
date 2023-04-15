@@ -156,6 +156,9 @@ const Header = () => {
               <li>
                 {isAuthorized() ? (
                   <div style={{ display: "flex", gap: "1rem" }}>
+                    <a aspath="records" href={"/records"} id="myRecords">
+                      Záznamy
+                    </a>
                     <a aspath="calendar" href={`/calendar/${getUserId()}`} id="myCalendar">
                       Kalendář
                     </a>

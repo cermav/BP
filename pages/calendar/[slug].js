@@ -8,7 +8,7 @@ import Layout from "../../layouts/Loggedin";
 import { withRedux } from "../../components/hoc/withRedux";
 
 const CalendarPage = () => {
-  const userRole = 3; // getUserRole();
+  const userRole = 2; // getUserRole();
 
   const buttonText = {
     today: "dnes",

@@ -3,13 +3,11 @@ import React, { useState, useEffect } from "react";
 import { getAuthorizationHeader, getUserId } from "../../services/AuthToken";
 import { useForm } from "react-hook-form";
 import { formatTimestamp } from "../../helpers/formatTimestamp";
-import SafariDate from "../../helpers/SafariDate";
 import { ReactSearchAutocomplete } from "react-search-autocomplete";
-import Bowser from "bowser";
 import { withNotie } from "react-notie";
+import InputDate from "../form/InputDate";
 
 const AppointmentModal = (props) => {
-  const browser = Bowser.getParser(window.navigator.userAgent);
   const { handleSubmit, errors, register } = useForm();
   const type = props.type;
   const hide = props.hide ? props.hide : null;
@@ -168,18 +166,7 @@ const AppointmentModal = (props) => {
           </div>
 
           <div className="date">
-            {browser.getBrowserName() === "Safari" ? (
-              <SafariDate error={errors.date} setDate={setDate} date={date} />
-            ) : (
-              <input
-                type="date"
-                name="date"
-                className={errors.date ? "modal-date error-input" : "modal-date"}
-                defaultValue={date}
-                onChange={(e) => setDate(e.target.value)}
-                ref={register({ required: true })}
-              />
-            )}
+            <InputDate date={date} setDate={setDate} name={"date"} register={register} errors={errors.date}/>
           </div>
 
           <div className="buttons">
