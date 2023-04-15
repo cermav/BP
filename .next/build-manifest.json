@@ -24,15 +24,15 @@
       "static/chunks/webpack.js",
       "static/chunks/pages/_error.js"
     ],
-    "/calendar/[slug]": [
-      "static/chunks/main.js",
-      "static/chunks/webpack.js",
-      "static/chunks/pages/calendar/[slug].js"
-    ],
     "/moje-zver/zvire/[slug]": [
       "static/chunks/main.js",
       "static/chunks/webpack.js",
       "static/chunks/pages/moje-zver/zvire/[slug].js"
+    ],
+    "/moje-zver/zvire/[slug]/zaznamy": [
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/chunks/pages/moje-zver/zvire/[slug]/zaznamy.js"
     ]
   },
   "ampFirstPages": []

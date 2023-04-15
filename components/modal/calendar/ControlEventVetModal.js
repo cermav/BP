@@ -8,7 +8,6 @@ import ExamRecord from "../../form/ExamRecord";
 import VetUpdateEvent from "../../form/event/VetUpdateEvent";
 
 const ControlEventVetModal = (props) => {
-  console.log(props);
   /**
    * constants
    */

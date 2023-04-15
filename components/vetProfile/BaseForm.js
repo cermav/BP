@@ -361,10 +361,6 @@ const BaseForm = ({ doctor, notie }) => {
       </form>
 
       {isVet() && <PasswordForm />}
-      <div className="loginButtons loggedIn">
-        <GooglePair member={doctor}></GooglePair>
-        <FacebookPair member={doctor}></FacebookPair>
-      </div>
     </>
   );
 };

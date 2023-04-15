@@ -83,7 +83,6 @@ const UserCalendar = (props) => {
 
   const getModalElement = (hide) => {
     const event = clickedEvent && appointments.find((a) => a.id === parseInt(clickedEvent, 10));
-    console.log(event);
     return clickedEvent ? (
       event.accepted ? (
         <UpdateEventOwnerModal

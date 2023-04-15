@@ -61,21 +61,6 @@ const Footer = (props) => {
             </Link>
             <nav className="menu">
               <ul>
-                <li>
-                  <Link href="/podminky-pouziti">
-                    <a href="/podminky-pouziti">Podmínky použití</a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/zasady-ochrany-osobnich-udaju">
-                    <a href="/zasady-ochrany-osobnich-udaju">Zásady ochrany osobních údajů</a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/o-nas">
-                    <a href="/o-nas">O nás</a>
-                  </Link>
-                </li>
               </ul>
             </nav>
             <div className="socialBlock">
@@ -96,24 +81,6 @@ const Footer = (props) => {
             </div>
           </div>
           <div className="right">
-            <form onSubmit={handleEmailSubmit}>
-              <div className="">
-                <label htmlFor="email" className="hdn">
-                  Váš email:
-                </label>
-                <input
-                  name="email"
-                  id="email"
-                  type="email"
-                  value={emailInput}
-                  required
-                  onChange={handleEmailChange}
-                  noValidate
-                />
-                <input type="submit" value="Chci dostávat newsletter" />
-              </div>
-            </form>
-            <span className="copyright fsSmall">&copy; Dr. Mouse {getYear()}</span>
           </div>
         </div>
       </div>

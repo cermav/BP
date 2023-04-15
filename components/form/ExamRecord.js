@@ -5,7 +5,7 @@ import moment from "moment";
 
 const ExamRecord = (props) => {
     const [record, setRecord] = useState("");
-    const [time, setTime] = useState("");
+    const [time, setTime] = useState(moment(props?.event?.start)?.format("HH:mm"));
     const [billingItems, setBillingItems] = useState([]);
 
     const handleBilling = (items) => {
@@ -86,7 +86,7 @@ const ExamRecord = (props) => {
                     <input type="time" onChange={(e) => setTime(e.target.value)}/> :
                     <span style={{
                         color: "white"
-                    }}>moment(props?.event?.start)?.format("HH:mm")</span>
+                    }}>{time}</span>
             }</div>
 
             <div /*className={errors.date && "error"}*/>

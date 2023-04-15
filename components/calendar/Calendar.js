@@ -129,6 +129,7 @@ const Calendar = () => {
     <ToggleModalContent
       toggle={(show) => (
         <div className="calendar-wrapper">
+          HEY YO
           <FullCalendar
             headerToolbar={{ center: "dayGridMonth,timeGridWeek,timeGridDay" }}
             plugins={[daygrid, timegrid, interaction, list]}

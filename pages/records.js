@@ -30,7 +30,7 @@ const Records = () => {
             <h1>Vaše záznamy z vyšetření</h1>
             <table style={{marginTop: "2rem", width: "60vw"}}>
                 {/*table header*/}
-                <tr style={{margin: "0.5rem"}}>
+                <tr style={{fontWeight: "bold"}}>
                     <td>
                         Název
                     </td>

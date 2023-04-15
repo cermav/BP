@@ -37,11 +37,12 @@ const VetSearch = (props) => {
     if (!props?.favorites) {
       return;
     }
+    
     const favIds = props?.favorites?.map((item) => item.id);
     const vetsWithoutFavorites = favIds && allVets?.filter((item) => !favIds.includes(item.user_id));
     console.log(vetsWithoutFavorites);
     setAllVets(vetsWithoutFavorites);
-  }, [props?.favorites]);
+  }, [allVets, props?.favorites]);
 
   const handleOnSearch = (string, results) => {
     // onSearch will have as the first callback parameter
